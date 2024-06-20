@@ -1,7 +1,12 @@
-import "./App.css";
+import React from "react";
+import MovieList from "./components/MovieList";
 
 function App() {
-    return <div>ReelSavvy</div>;
+    return (
+        <div>
+            <MovieList />
+        </div>
+    );
 }
 
 export default App;
