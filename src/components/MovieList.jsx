@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { fetchGenres, fetchNowPlaying } from "../api/tmdbApi";
+import { fetchNowPlaying } from "../api/tmdbApi";
 
 const MovieList = () => {
-    const [genres, setGenres] = useState([]);
+    const [movies, setMovies] = useState([]);
+    const posterURL = "https://image.tmdb.org/t/p/w500";
 
     useEffect(() => {
         fetchNowPlaying()
             .then((data) => {
-                setGenres(data);
+                setMovies(data);
             })
             .catch((error) => {
-                console.error("Error fetching genres:", error);
+                console.error("Error fetching movies:", error);
             });
     }, [fetchNowPlaying]);
 
-    const posterURL = "https://image.tmdb.org/t/p/w500";
-
     return (
         <div>
-            <h1>Movie Genres</h1>
+            <h1>Movies</h1>
 
-            {genres.map((genre) => (
-                <div key={genre.id}>
-                    <h2>{genre.title}</h2>
-                    <img src={`${posterURL}${genre.poster_path}`} alt={genre.title} />
-                    <p>{genre.overview}</p>
+            {movies.map((movie) => (
+                <div key={movie.id}>
+                    <h2>{movie.title}</h2>
+                    <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                    <p>{movie.overview}</p>
                 </div>
             ))}
         </div>
