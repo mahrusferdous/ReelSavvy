@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchGenres, fetchMoviesByGenre } from "../api/tmdbApi";
+import { fetchGenres } from "../api/tmdbApi";
 
 const MovieList = () => {
     const [genres, setGenres] = useState([]);
