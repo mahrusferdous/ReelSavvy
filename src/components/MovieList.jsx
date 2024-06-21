@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { fetchGenres } from "../api/tmdbApi";
+import { fetchGenres, fetchNowPlaying } from "../api/tmdbApi";
 
 const MovieList = () => {
     const [genres, setGenres] = useState([]);
 
     useEffect(() => {
-        fetchGenres()
+        fetchNowPlaying()
             .then((data) => {
                 setGenres(data);
             })
             .catch((error) => {
                 console.error("Error fetching genres:", error);
             });
-    }, [fetchGenres]);
+    }, [fetchNowPlaying]);
+
+    const posterURL = "https://image.tmdb.org/t/p/w500";
 
     return (
         <div>
@@ -20,7 +22,9 @@ const MovieList = () => {
 
             {genres.map((genre) => (
                 <div key={genre.id}>
-                    <h2>{genre.name}</h2>
+                    <h2>{genre.title}</h2>
+                    <img src={`${posterURL}${genre.poster_path}`} alt={genre.title} />
+                    <p>{genre.overview}</p>
                 </div>
             ))}
         </div>
