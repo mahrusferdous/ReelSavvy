@@ -2,7 +2,7 @@ import axios from "axios";
 
 const URL = "https://api.themoviedb.org/3";
 const TOKEN =
-    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWVkYzE4ZWYzZmRjN2NkZTYxYTUyNmQzNmYxZGMxMiIsInN1YiI6IjYxMTZkNjBhNjMzMmY3MDA3MjM4MTRlOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fSRyvaPGcDkVN1hbHWPYUrkBSNgZSlibC3x5at - bBkQ";
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWVkYzE4ZWYzZmRjN2NkZTYxYTUyNmQzNmYxZGMxMiIsInN1YiI6IjYxMTZkNjBhNjMzMmY3MDA3MjM4MTRlOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fSRyvaPGcDkVN1hbHWPYUrkBSNgZSlibC3x5at-bBkQ";
 
 const option = {
     headers: {
