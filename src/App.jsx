@@ -1,11 +1,12 @@
 import React from "react";
 import MovieList from "./components/MovieList";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <div>
-            <MovieList />
-        </div>
+        <Routes>
+            <Route path="/" element={<MovieList />} />
+        </Routes>
     );
 }
 
