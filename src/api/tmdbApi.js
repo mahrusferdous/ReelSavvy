@@ -14,7 +14,6 @@ const option = {
 export const fetchGenres = async () => {
     try {
         const response = await axios.get(`${URL}/genre/movie/list?language=en-US`, option);
-        console.log(response.data.genres);
         return response.data.genres;
     } catch (error) {
         console.error(error);
@@ -24,7 +23,24 @@ export const fetchGenres = async () => {
 export const fetchNowPlaying = async () => {
     try {
         const response = await axios.get(`${URL}/movie/now_playing?language=en-US&page=1`, option);
-        console.log(response.data.results);
+        return response.data.results;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchGenreMovies = async (id) => {
+    try {
+        const response = await axios.get(`${URL}/discover/movie?with_genres=${id}&language=en-US`, option);
+        return response.data.results;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchMovieTrailer = async (id) => {
+    try {
+        const response = await axios.get(`${URL}/movie/${id}/videos?language=en-US`, option);
         return response.data.results;
     } catch (error) {
         console.error(error);
