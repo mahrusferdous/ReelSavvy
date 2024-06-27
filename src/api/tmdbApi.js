@@ -46,3 +46,21 @@ export const fetchMovieTrailer = async (id) => {
         console.error(error);
     }
 };
+
+export const fetchMovieInfo = async (id) => {
+    try {
+        const response = await axios.get(`${URL}/movie/${id}?language=en-US`, option);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchMovieProvider = async (id) => {
+    try {
+        const response = await axios.get(`${URL}/movie/${id}/watch/providers?language=en-US`, option);
+        return response.data.results.US;
+    } catch (error) {
+        console.error(error);
+    }
+};

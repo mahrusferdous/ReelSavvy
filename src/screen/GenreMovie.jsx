@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchGenreMovies } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
-import MovieTrailor from "../components/MovieTrailer";
+import MovieTrailer from "../components/MovieTrailer";
+import MovieInfo from "../components/MovieInfo";
+import MovieProvider from "../components/MovieProvider";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
@@ -35,7 +37,9 @@ const GenreMovie = () => {
                     <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
                     <img src={`${posterURL}${movie.backdrop_path}`} alt={movie.title} />
                     <p>{movie.overview}</p>
-                    <MovieTrailor movieId={movie.id} />
+                    <MovieTrailer movieId={movie.id} />
+                    <MovieInfo movieId={movie.id} />
+                    <MovieProvider movieId={movie.id} />
                 </div>
             ))}
         </div>

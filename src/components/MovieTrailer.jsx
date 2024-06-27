@@ -18,7 +18,6 @@ const MovieTrailer = ({ movieId }) => {
     useEffect(() => {
         const trailer = trailers && trailers.find((trailer) => trailer.type === "Trailer");
         setTrailer(trailer);
-        console.log(trailers && trailers);
     }, [trailers]);
 
     return (
