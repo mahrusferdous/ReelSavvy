@@ -7,7 +7,6 @@ ReelSavvy is a movie recommendation web application that suggests movies based o
 -   React
 -   Axios
 -   The Movie Database API
--   YouTube API
 
 ## Features
 
