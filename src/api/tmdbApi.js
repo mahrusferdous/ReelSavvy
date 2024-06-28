@@ -64,3 +64,12 @@ export const fetchMovieProvider = async (id) => {
         console.error(error);
     }
 };
+
+export const fetchSearchMovies = async (query) => {
+    try {
+        const response = await axios.get(`${URL}/search/movie?query=${query}&language=en-US&page=1`, option);
+        return response.data.results;
+    } catch (error) {
+        console.error(error);
+    }
+};

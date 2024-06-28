@@ -19,6 +19,9 @@ const HomePage = () => {
     return (
         <div>
             <h1>Genres</h1>
+            <Link to="/search">
+                <button>Search for movie</button>
+            </Link>
             {genre.map((genre) => (
                 <div key={genre.id}>
                     <Link to={`/movie/${genre.id}`}>
