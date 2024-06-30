@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { fetchGenres } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 const HomePage = () => {
     const [genre, setGenre] = useState([]);
@@ -17,18 +18,21 @@ const HomePage = () => {
     }, [fetchGenres]);
 
     return (
-        <div>
-            <h1>Genres</h1>
-            <Link to="/search">
-                <button>Search for movie</button>
-            </Link>
-            {genre.map((genre) => (
-                <div key={genre.id}>
-                    <Link to={`/movie/${genre.id}`}>
-                        <h2>{genre.name}</h2>
-                    </Link>
-                </div>
-            ))}
+        <div className="d-flex">
+            <Sidebar />
+            <div className="flex-column">
+                <h1>Genres</h1>
+                <Link to="/search">
+                    <button>Search for movie</button>
+                </Link>
+                {genre.map((genre) => (
+                    <div key={genre.id}>
+                        <Link to={`/movie/${genre.id}`}>
+                            <h2>{genre.name}</h2>
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

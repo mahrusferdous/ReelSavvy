@@ -1,0 +1,28 @@
+/* Sidebar.module.css */
+.sidebar {
+    width: 400px;
+    background-color: #000002; /* bg-dark equivalent */
+    color: white;
+    min-height: 100vh; /* vh-100 equivalent */
+    padding: 1rem; /* p-3 equivalent */
+}
+
+.navLink {
+    color: white; /* text-white equivalent */
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.navLink:hover {
+    background-color: #495057; /* hover effect */
+}
+
+.pTag {
+    font-size: 10px;
+    margin: 35px 50px;
+}
+
+.logo {
+    text-align: center;
+}
