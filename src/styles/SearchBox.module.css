@@ -1,0 +1,27 @@
+.searchBox {
+    border-radius: 9px;
+    border: 1px solid rgba(245, 239, 235, 0.1);
+    background: #1d1d1d;
+
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    gap: 142px;
+}
+
+.search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    margin-left: 0.5rem; /* Adjust margin between input and button */
+    align-items: center;
+    position: absolute;
+    left: 290px;
+    top: 142px;
+}
+
+.search img {
+    width: 30px;
+    height: 30px;
+}
