@@ -2,6 +2,10 @@
 
 ReelSavvy is a movie recommendation web application that suggests movies based on the user's mood. The user can select their mood from a list of options and the application will recommend a movie that matches their mood. The user can also search for a specific movie and view its details, including the trailer.
 
+## Link to the deployed application
+
+[https://reel-savvy.vercel.app/](https://reel-savvy.vercel.app/)
+
 ## Technologies Used
 
 -   React
