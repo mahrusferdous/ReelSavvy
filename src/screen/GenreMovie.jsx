@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import MovieTrailer from "../components/MovieTrailer";
 import MovieInfo from "../components/MovieInfo";
 import MovieProvider from "../components/MovieProvider";
+import Sidebar from "./Sidebar";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
@@ -22,26 +23,29 @@ const GenreMovie = () => {
     }, [genreId]);
 
     return (
-        <div>
-            <h1>Genre Movies</h1>
-            <Link to={"/"}>
-                <button>Get Back</button>
-            </Link>
+        <div className="d-flex">
+            <Sidebar />
+            <div className="flex-column">
+                <h1>Genre Movies</h1>
+                <Link to={"/"}>
+                    <button>Get Back</button>
+                </Link>
 
-            {genreMovies.map((movie) => (
-                <div key={movie.id}>
-                    <h2>{movie.title}</h2>
-                    <h3>Release Date: {movie.release_date}</h3>
-                    <h3>Popularity: {movie.popularity}</h3>
-                    <h3>Ratings: {movie.vote_average}</h3>
-                    <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
-                    <img src={`${posterURL}${movie.backdrop_path}`} alt={movie.title} />
-                    <p>{movie.overview}</p>
-                    <MovieTrailer movieId={movie.id} />
-                    <MovieInfo movieId={movie.id} />
-                    <MovieProvider movieId={movie.id} />
-                </div>
-            ))}
+                {genreMovies.map((movie) => (
+                    <div key={movie.id}>
+                        <h2>{movie.title}</h2>
+                        <h3>Release Date: {movie.release_date}</h3>
+                        <h3>Popularity: {movie.popularity}</h3>
+                        <h3>Ratings: {movie.vote_average}</h3>
+                        <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                        <img src={`${posterURL}${movie.backdrop_path}`} alt={movie.title} />
+                        <p>{movie.overview}</p>
+                        <MovieTrailer movieId={movie.id} />
+                        <MovieInfo movieId={movie.id} />
+                        <MovieProvider movieId={movie.id} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

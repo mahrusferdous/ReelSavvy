@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { fetchSearchMovies } from "../api/tmdbApi";
-import SearchMovie from "./SearchMovie";
 import styles from "../styles/SearchBox.module.css";
 import iconSearch from "../assets/logos/icon-search.svg";
+import { MovieContext } from "../context/MovieContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
-    const [movie, setMovie] = useState();
+    const { movie, setMovie } = useContext(MovieContext);
     const [query, setQuery] = useState("");
+    const navigate = useNavigate();
 
     const search = (e) => {
         e.preventDefault();
         fetchSearchMovies(query)
             .then((data) => {
                 setMovie(data);
+                navigate("/search");
             })
             .catch((error) => {
                 console.error("Error fetching movies:", error);
             });
     };
-
-    console.log(movie);
 
     return (
         <div className="d-flex justify-content-center align-items-center">
@@ -34,13 +35,14 @@ const SearchBox = () => {
                         placeholder="Search"
                         onChange={(e) => setQuery(e.target.value)}
                     />
+
                     <button type="submit" className={styles.search}>
                         <img src={iconSearch} alt="search" />
                     </button>
                 </div>
             </form>
 
-            {movie && movie.map((movie) => <SearchMovie movie={movie} />)}
+            {/* {movie && movie.map((movie) => <SearchMovie movie={movie} />)} */}
         </div>
     );
 };

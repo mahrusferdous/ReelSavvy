@@ -1,6 +1,6 @@
 /* Sidebar.module.css */
 .sidebar {
-    width: 400px;
+    min-width: 400px;
     background-color: #000002; /* bg-dark equivalent */
     color: white;
     min-height: 100vh; /* vh-100 equivalent */
@@ -12,6 +12,7 @@
     text-decoration: none;
     padding: 0.5rem 0;
     display: block;
+    border-radius: 5px;
 }
 
 .navLink:hover {
@@ -26,4 +27,8 @@
 .logo {
     text-align: center;
     margin-bottom: 5rem;
+}
+
+.navLink img {
+    padding: 0 1rem;
 }
