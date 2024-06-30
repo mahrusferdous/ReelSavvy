@@ -11,7 +11,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/movie/:genreId" element={<GenreMovie />} />
             <Route path="/search" element={<SearchMovie />} />
-            {/* <Route path="*" element={<h1>Not Found</h1>} /> */}
+            <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
     );
 }

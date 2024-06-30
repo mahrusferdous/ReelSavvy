@@ -1,14 +1,19 @@
-/* Sidebar.module.css */
 .sidebar {
     min-width: 400px;
-    background-color: #000002; /* bg-dark equivalent */
+    background-color: #000002;
     color: white;
-    min-height: 100vh; /* vh-100 equivalent */
-    padding: 1rem; /* p-3 equivalent */
+    min-height: 100vh;
+    padding: 1rem;
+    position: fixed;
+}
+
+.gap {
+    min-width: 400px;
+    min-height: 100vh;
 }
 
 .navLink {
-    color: white; /* text-white equivalent */
+    color: white;
     text-decoration: none;
     padding: 0.5rem 0;
     display: block;
@@ -16,7 +21,7 @@
 }
 
 .navLink:hover {
-    background-color: #495057; /* hover effect */
+    background-color: #495057;
 }
 
 .pTag {
@@ -31,4 +36,8 @@
 
 .navLink img {
     padding: 0 1rem;
+}
+
+.navLink:hover {
+    color: orange;
 }

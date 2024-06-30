@@ -6,6 +6,7 @@ import MovieTrailer from "../components/MovieTrailer";
 import MovieInfo from "../components/MovieInfo";
 import MovieProvider from "../components/MovieProvider";
 import Sidebar from "./Sidebar";
+import styles from "../styles/HomePage.module.css";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
@@ -25,7 +26,7 @@ const GenreMovie = () => {
     return (
         <div className="d-flex">
             <Sidebar />
-            <div className="flex-column">
+            <div className={styles.main_content}>
                 <h1>Genre Movies</h1>
                 <Link to={"/"}>
                     <button>Get Back</button>

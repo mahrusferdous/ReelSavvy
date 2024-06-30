@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchGenres } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import styles from "../styles/HomePage.module.css";
 
 const HomePage = () => {
     const [genre, setGenre] = useState([]);
@@ -20,7 +21,7 @@ const HomePage = () => {
     return (
         <div className="d-flex">
             <Sidebar />
-            <div className="flex-column">
+            <div className={styles.main_content}>
                 <h1>Genres</h1>
                 {genre.map((genre) => (
                     <div key={genre.id}>
