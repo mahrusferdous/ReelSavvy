@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { fetchGenreMovies } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import MovieTrailer from "../components/MovieTrailer";
-import MovieInfo from "../components/MovieInfo";
 import MovieProvider from "../components/MovieProvider";
 import Sidebar from "./Sidebar";
 import styles from "../styles/HomePage.module.css";
@@ -42,7 +41,6 @@ const GenreMovie = () => {
                         <img src={`${posterURL}${movie.backdrop_path}`} alt={movie.title} />
                         <p>{movie.overview}</p>
                         <MovieTrailer movieId={movie.id} />
-                        <MovieInfo movieId={movie.id} />
                         <MovieProvider movieId={movie.id} />
                     </div>
                 ))}

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./screen/HomePage";
 import GenreMovie from "./screen/GenreMovie";
 import SearchMovie from "./screen/SearchMovie.jsx";
+import MovieInfo from "./screen/MovieInfo.jsx";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/movie/:genreId" element={<GenreMovie />} />
             <Route path="/search" element={<SearchMovie />} />
+            <Route path="/movie" element={<MovieInfo />} />
             <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
     );
