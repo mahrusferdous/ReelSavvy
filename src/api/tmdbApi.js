@@ -73,3 +73,12 @@ export const fetchSearchMovies = async (query) => {
         console.error(error);
     }
 };
+
+export const fetchSimilarMovies = async (id) => {
+    try {
+        const response = await axios.get(`${URL}/movie/${id}/similar?language=en-US&page=1`, option);
+        return response.data.results;
+    } catch (error) {
+        console.error(error);
+    }
+};

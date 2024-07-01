@@ -24,7 +24,7 @@ const Sidebar = () => {
                 <Link to="/" className={styles.navLink}>
                     <img src={logoDiscovery} alt="discovery" /> Discovery
                 </Link>
-                <Link to="/" className={styles.navLink}>
+                <Link to="/genre" className={styles.navLink}>
                     <img src={logoLoader} alt="loader" /> Mood Feature
                 </Link>
                 <Link to="/" className={styles.navLink}>

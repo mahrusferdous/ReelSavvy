@@ -3,6 +3,7 @@ import { fetchMovieInfo } from "../api/tmdbApi";
 import { IdContext } from "../context/IdContext";
 import MovieTrailer from "../components/MovieTrailer";
 import MovieProvider from "../components/MovieProvider";
+import SimilarMovie from "../components/SimilarMovie";
 
 const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
@@ -57,6 +58,7 @@ const MovieInfo = () => {
             <img src={`https://image.tmdb.org/t/p/w500${movieInfo.backdrop_path}`} alt={movieInfo.title} />
             <p>{movieInfo.overview}</p>
             <MovieTrailer movieId={movieInfo.id} />
+            <SimilarMovie id={movieInfo.id} />
         </div>
     );
 };
