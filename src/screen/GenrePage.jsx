@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { fetchGenres } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import styles from "../styles/HomePage.module.css";
+import styles from "../styles/GenrePage.module.css";
 
-const HomePage = () => {
+const GenrePage = () => {
     const [genre, setGenre] = useState([]);
 
     useEffect(() => {
@@ -35,4 +35,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default GenrePage;

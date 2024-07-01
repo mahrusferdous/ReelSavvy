@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import MovieTrailer from "../components/MovieTrailer";
 import MovieProvider from "../components/MovieProvider";
 import Sidebar from "./Sidebar";
-import styles from "../styles/HomePage.module.css";
+import styles from "../styles/GenrePage.module.css";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
