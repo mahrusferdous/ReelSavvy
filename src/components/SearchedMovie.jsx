@@ -14,7 +14,7 @@ const SearchedMovie = ({ movie }) => {
         <div>
             <div>
                 <Link to={"/movie"} onClick={() => movieProcess()}>
-                    <h2>{movie.title}</h2>
+                    {/* <h2>{movie.title}</h2> */}
                     {/* <h3>Release Date: {movie.release_date}</h3>
                 <h3>Popularity: {movie.popularity}</h3>
                 <h3>Ratings: {movie.vote_average}</h3> */}
