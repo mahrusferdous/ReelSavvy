@@ -9,12 +9,15 @@ import logoRecent from "../assets/logos/icon-clock.svg";
 import logoCollection from "../assets/logos/icon-star.svg";
 import logoSettings from "../assets/logos/icon-settings.svg";
 import logoHelp from "../assets/logos/icon-question.svg";
+import logoReelsavvy from "../assets/logos/reelsavvy_logo.png";
 import SearchBox from "../components/SearchBox";
 
 const Sidebar = () => {
     return (
         <div className={styles.sidebar}>
-            <h2 className={styles.logo}>MyApp</h2>
+            <div className={styles.logo}>
+                <img src={logoReelsavvy} alt="reelsavvy" />
+            </div>
             <SearchBox />
             <p className={styles.pTag}>MAIN</p>
             <nav className="nav flex-column mx-5">
