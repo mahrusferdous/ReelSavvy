@@ -5,6 +5,8 @@ import { Carousel } from "react-bootstrap";
 import styles from "../styles/HomePage.module.css";
 import { IdContext } from "../context/IdContext";
 import { useNavigate } from "react-router-dom";
+import iconHeart from "../assets/logos/icon-heart.svg";
+import PopularMovies from "../components/PopularMovies";
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -22,8 +24,6 @@ const HomePage = () => {
                 console.error("Error fetching movies:", error);
             });
     }, [fetchNowPlaying]);
-
-    console.log(movies);
 
     const shuffleArray = (array) => {
         const shuffled = array.slice(); // Create a copy of the array
@@ -56,11 +56,16 @@ const HomePage = () => {
                                 <p className={styles.captionP}>TOP RECOMMENDED MOVIES</p>
                                 <h1>{movie.title}</h1>
                                 {/* <p>{movie.overview}</p>  */}
+                                <button className={styles.heart}>
+                                    <img src={iconHeart} alt="heart" />
+                                </button>
                             </Carousel.Caption>
                         </Carousel.Item>
                     ))}
                 </Carousel>
             </div>
+
+            <PopularMovies />
         </div>
     );
 };

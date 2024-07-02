@@ -82,3 +82,52 @@ export const fetchSimilarMovies = async (id) => {
         console.error(error);
     }
 };
+
+export const fetchSentimentalMovies = async () => {
+    try {
+        const response = await axios.get(`${URL}/discover/movie`, {
+            params: {
+                language: "en-US",
+                sort_by: "popularity.desc",
+                include_adult: false,
+                include_video: false,
+                with_genres: "18,10749,10751", // Drama, Romance, Family
+                page: 1,
+            },
+            ...option,
+        });
+        return response.data.results;
+    } catch (error) {
+        console.error("Error fetching sentimental movies:", error);
+    }
+};
+
+export const fetchNostalgicMovies = async () => {
+    try {
+        const response = await axios.get(`${URL}/discover/movie`, {
+            params: {
+                api_key: API_KEY,
+                language: "en-US",
+                sort_by: "popularity.desc",
+                include_adult: false,
+                include_video: false,
+                primary_release_date_gte: "1980-01-01",
+                primary_release_date_lte: "1999-12-31", // Example: 80s and 90s movies
+                page: 1,
+            },
+            ...option,
+        });
+        return response.data.results;
+    } catch (error) {
+        console.error("Error fetching nostalgic movies:", error);
+    }
+};
+
+export const fetchPopularMovies = async () => {
+    try {
+        const response = await axios.get(`${URL}/movie/popular?language=en-US&page=1`, option);
+        return response.data.results;
+    } catch (error) {
+        console.error("Error fetching popular movies:", error);
+    }
+};
