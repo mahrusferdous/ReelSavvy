@@ -10,7 +10,7 @@ import { IdContext } from "../context/IdContext";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
-    const posterURL = "https://image.tmdb.org/t/p/w500";
+    const posterURL = "https://image.tmdb.org/t/p/original";
     const [genreMovies, setGenreMovies] = useState([]);
     const { setId } = useContext(IdContext);
 
