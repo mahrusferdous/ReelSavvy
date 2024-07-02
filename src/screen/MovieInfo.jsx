@@ -8,10 +8,12 @@ import Sidebar from "./Sidebar";
 import styles from "../styles/MovieInfo.module.css";
 import logoPlay from "../assets/logos/icon-play.svg";
 import iconHeart from "../assets/logos/icon-heart.svg";
+import { Carousel } from "react-bootstrap";
 
 const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
     const { id } = useContext(IdContext);
+    const posterURL = "https://image.tmdb.org/t/p/original";
 
     useEffect(() => {
         fetchMovieInfo(id)
@@ -33,12 +35,30 @@ const MovieInfo = () => {
         <div className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
-                {/* <img
-                    className={styles.image}
-                    src={`https://image.tmdb.org/t/p/w500${movieInfo.backdrop_path}`}
-                    alt={movieInfo.title}
-                /> */}
-                <div
+                <Carousel controls={false} indicators={false}>
+                    <Carousel.Item key={movieInfo.id} className={styles.title}>
+                        <img
+                            className="d-block w-100"
+                            src={`${posterURL}${movieInfo.backdrop_path}`}
+                            alt={movieInfo.title}
+                        />
+                        <Carousel.Caption>
+                            <h2>{movieInfo.title}</h2>
+                            <h3>{movieInfo.tagline}</h3>
+
+                            <div>
+                                <button className={styles.heart}>
+                                    <img src={iconHeart} alt="heart" />
+                                </button>
+                                <button className={styles.btn}>
+                                    <img style={{ width: "30px" }} src={logoPlay} alt="play" /> Play Trailer
+                                </button>
+                            </div>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+
+                {/* <div
                     className={styles.title}
                     style={{
                         backgroundImage: `url(https://image.tmdb.org/t/p/original${movieInfo.backdrop_path})`,
@@ -59,7 +79,7 @@ const MovieInfo = () => {
                     </div>
 
                     <div className={styles.shade}></div>
-                </div>
+                </div> */}
 
                 <div className="d-flex justify-content-evenly" style={{ background: "black", paddingTop: "20px" }}>
                     <div className={styles.topic}>
