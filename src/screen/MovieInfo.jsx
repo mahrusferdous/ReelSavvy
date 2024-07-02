@@ -23,7 +23,11 @@ const MovieInfo = () => {
             });
     }, [id, fetchMovieInfo]);
 
-    console.log(movieInfo);
+    // console.log(movieInfo);
+
+    if (!movieInfo) {
+        return <h1>Loading...</h1>;
+    }
 
     return (
         <div className="d-flex">

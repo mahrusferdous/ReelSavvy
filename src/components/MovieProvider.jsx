@@ -12,7 +12,7 @@ const MovieProvider = ({ movieId }) => {
             .catch((error) => {
                 console.error("Error fetching movie provider:", error);
             });
-    }, [movieId]);
+    }, [movieId, fetchMovieProvider]);
 
     return (
         <div>
