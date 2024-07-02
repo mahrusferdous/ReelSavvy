@@ -44,7 +44,7 @@ const MovieInfo = () => {
                         />
                         <Carousel.Caption>
                             <h2>{movieInfo.title}</h2>
-                            <h3>{movieInfo.tagline}</h3>
+                            <p style={{ fontSize: "18px", fontWeight: "normal" }}>{movieInfo.tagline}</p>
 
                             <div>
                                 <button className={styles.heart}>
