@@ -1,0 +1,13 @@
+.main_content {
+    margin-left: 400px; /* Adjust margin to account for side element width */
+    flex-direction: column;
+    background-color: black;
+}
+
+.captionP {
+    color: orange;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 600px;
+}
