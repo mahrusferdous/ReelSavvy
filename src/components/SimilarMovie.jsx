@@ -14,6 +14,8 @@ const SimilarMovie = ({ id }) => {
             });
     }, [id, fetchSimilarMovies]);
 
+    console.log(similarMovies);
+
     return (
         <div>
             {similarMovies &&

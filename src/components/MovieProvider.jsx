@@ -18,14 +18,16 @@ const MovieProvider = ({ movieId }) => {
         <div>
             {movie && (
                 <div id={movieId}>
+                    <p>Available Streaming Platform</p>
                     {movie.flatrate?.map((e) => (
                         <div key={e.provider_id}>
-                            <h3>Provider: {e.provider_name}</h3>
+                            <p>Provider: {e.provider_name}</p>
                         </div>
                     ))}
+                    <p>Available on Stores</p>
                     {movie.buy?.map((e) => (
                         <div key={e.provider_id}>
-                            <h3>Buy: {e.provider_name}</h3>
+                            <p>Buy: {e.provider_name}</p>
                         </div>
                     ))}
                 </div>

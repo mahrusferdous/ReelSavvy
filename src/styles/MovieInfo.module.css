@@ -1,9 +1,89 @@
 .main_content {
     margin-left: 400px; /* Adjust margin to account for side element width */
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.image {
+.btn {
+    padding: 5px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.heart {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    margin-right: 20px;
+}
+
+.heart img {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 600px;
+}
+
+.shade {
     width: 100%;
-    object-fit: cover;
+    height: 50px;
+    background: linear-gradient(to top, rgba(0, 0.3, 0.5, 0.7), transparent);
+}
+
+.topic {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gridContainer {
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gridContainer > div {
+    padding: 20px;
+    color: white;
+}
+
+.gridContainer h4 {
+    color: orange;
+}
+
+.gridContainer p,
+.gridContainer h3 {
+    margin: 0;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
 }
