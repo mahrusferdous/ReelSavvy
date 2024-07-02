@@ -128,7 +128,7 @@ const MovieInfo = () => {
 
                 {/* <img src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`} alt={movieInfo.title} /> */}
                 {/* <MovieTrailer movieId={movieInfo.id} /> */}
-                {/* <SimilarMovie id={movieInfo.id} /> */}
+                <SimilarMovie id={movieInfo.id} />
             </div>
         </div>
     );
