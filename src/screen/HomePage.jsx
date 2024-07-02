@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { fetchNowPlaying } from "../api/tmdbApi";
 import Sidebar from "./Sidebar";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Container } from "react-bootstrap";
 import styles from "../styles/HomePage.module.css";
 import { IdContext } from "../context/IdContext";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +37,7 @@ const HomePage = () => {
     };
 
     return (
-        <div>
+        <Container>
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel className={styles.caption}>
@@ -69,7 +69,7 @@ const HomePage = () => {
             <PopularMovies />
             <SentimentalMovies />
             <NostalgicMovies />
-        </div>
+        </Container>
     );
 };
 
