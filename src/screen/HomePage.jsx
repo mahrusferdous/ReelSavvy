@@ -7,6 +7,7 @@ import { IdContext } from "../context/IdContext";
 import { useNavigate } from "react-router-dom";
 import iconHeart from "../assets/logos/icon-heart.svg";
 import PopularMovies from "../components/PopularMovies";
+import SentimentalMovies from "../components/SentimentalMovies";
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -66,6 +67,7 @@ const HomePage = () => {
             </div>
 
             <PopularMovies />
+            <SentimentalMovies />
         </div>
     );
 };

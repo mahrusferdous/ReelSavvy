@@ -106,13 +106,12 @@ export const fetchNostalgicMovies = async () => {
     try {
         const response = await axios.get(`${URL}/discover/movie`, {
             params: {
-                api_key: API_KEY,
                 language: "en-US",
                 sort_by: "popularity.desc",
                 include_adult: false,
                 include_video: false,
                 primary_release_date_gte: "1980-01-01",
-                primary_release_date_lte: "1999-12-31", // Example: 80s and 90s movies
+                primary_release_date_lte: "1999-12-31", // 80s and 90s movies
                 page: 1,
             },
             ...option,

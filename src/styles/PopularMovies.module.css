@@ -4,9 +4,18 @@
     overflow-x: scroll;
     background-color: black;
     margin-left: 400px;
-    padding: 20px 0;
+    padding-top: 50px;
     flex-direction: column;
     color: white;
+}
+
+.main_content::-webkit-scrollbar {
+    display: none;
+}
+
+.main_content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .main_content div {
@@ -20,6 +29,7 @@
     margin-left: 20px;
     transition: transform 450ms;
     border-radius: 5px;
+    padding: 50px 0;
 }
 
 .poster img {
