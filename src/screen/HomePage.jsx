@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import iconHeart from "../assets/logos/icon-heart.svg";
 import PopularMovies from "../components/PopularMovies";
 import SentimentalMovies from "../components/SentimentalMovies";
+import NostalgicMovies from "../components/NostalgicMovies";
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -68,6 +69,7 @@ const HomePage = () => {
 
             <PopularMovies />
             <SentimentalMovies />
+            <NostalgicMovies />
         </div>
     );
 };

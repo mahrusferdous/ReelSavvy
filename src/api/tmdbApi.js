@@ -104,14 +104,15 @@ export const fetchSentimentalMovies = async () => {
 
 export const fetchNostalgicMovies = async () => {
     try {
+        const randomYear = Math.floor(Math.random() * (1999 - 1980 + 1)) + 1980;
+
         const response = await axios.get(`${URL}/discover/movie`, {
             params: {
                 language: "en-US",
                 sort_by: "popularity.desc",
                 include_adult: false,
                 include_video: false,
-                primary_release_date_gte: "1980-01-01",
-                primary_release_date_lte: "1999-12-31", // 80s and 90s movies
+                primary_release_year: randomYear,
                 page: 1,
             },
             ...option,
