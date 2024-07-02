@@ -57,7 +57,6 @@ const HomePage = () => {
                             <Carousel.Caption>
                                 <p className={styles.captionP}>TOP RECOMMENDED MOVIES</p>
                                 <h1>{movie.title}</h1>
-                                {/* <p>{movie.overview}</p>  */}
                                 <button className={styles.heart}>
                                     <img src={iconHeart} alt="heart" />
                                 </button>
