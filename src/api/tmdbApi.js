@@ -85,6 +85,9 @@ export const fetchSimilarMovies = async (id) => {
 
 export const fetchSentimentalMovies = async () => {
     try {
+        const MAX_PAGES = 10; // Adjust this based on your knowledge of the API
+        const randomPage = Math.floor(Math.random() * MAX_PAGES) + 1;
+
         const response = await axios.get(`${URL}/discover/movie`, {
             params: {
                 language: "en-US",
@@ -92,7 +95,7 @@ export const fetchSentimentalMovies = async () => {
                 include_adult: false,
                 include_video: false,
                 with_genres: "18,10749,10751", // Drama, Romance, Family
-                page: 1,
+                page: randomPage,
             },
             ...option,
         });

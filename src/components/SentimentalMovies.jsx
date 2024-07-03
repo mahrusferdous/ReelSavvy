@@ -34,7 +34,7 @@ const SentimentalMovies = () => {
                             }}
                             className={styles.poster}
                         >
-                            <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                            {movie.poster_path && <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />}
                         </div>
                     ))}
                 </div>
