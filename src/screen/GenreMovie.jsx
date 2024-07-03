@@ -26,7 +26,7 @@ const GenreMovie = () => {
     }, [genreId]);
 
     return (
-        <Container className="d-flex">
+        <div className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>Genre Movies</h1>
@@ -50,7 +50,7 @@ const GenreMovie = () => {
                     </div>
                 ))}
             </div>
-        </Container>
+        </div>
     );
 };
 

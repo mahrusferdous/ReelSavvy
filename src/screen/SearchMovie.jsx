@@ -9,12 +9,12 @@ const SearchMovie = () => {
     const { movie } = useContext(MovieContext);
 
     return (
-        <Container className="d-flex">
+        <div className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 {movie && movie.map((movie) => <SearchedMovie key={movie.id} movie={movie} />)}
             </div>
-        </Container>
+        </div>
     );
 };
 

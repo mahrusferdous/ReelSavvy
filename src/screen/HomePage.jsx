@@ -37,7 +37,7 @@ const HomePage = () => {
     };
 
     return (
-        <Container>
+        <div>
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel className={styles.caption}>
@@ -69,7 +69,7 @@ const HomePage = () => {
             <PopularMovies />
             <SentimentalMovies />
             <NostalgicMovies />
-        </Container>
+        </div>
     );
 };
 

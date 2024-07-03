@@ -32,7 +32,7 @@ const MovieInfo = () => {
     }
 
     return (
-        <Container className="d-flex">
+        <div className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel controls={false} indicators={false}>
@@ -126,7 +126,7 @@ const MovieInfo = () => {
                 {/* <MovieTrailer movieId={movieInfo.id} /> */}
                 <SimilarMovie id={movieInfo.id} />
             </div>
-        </Container>
+        </div>
     );
 };
 

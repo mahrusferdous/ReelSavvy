@@ -1,4 +1,15 @@
 .main_content {
     margin-left: 400px; /* Adjust margin to account for side element width */
     flex-direction: column;
+    color: white;
+    background-color: #050505;
+    width: 100%;
+}
+
+.moods {
+    display: flex;
+}
+
+.main_content h2 {
+    margin: 20px;
 }
