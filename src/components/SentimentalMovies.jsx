@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const SentimentalMovies = () => {
     const [movies, setMovies] = useState([]);
-    const posterURL = "https://image.tmdb.org/t/p/original";
+    const posterURL = "https://image.tmdb.org/t/p/w500";
     const navigate = useNavigate();
     const { setId } = useContext(IdContext);
 

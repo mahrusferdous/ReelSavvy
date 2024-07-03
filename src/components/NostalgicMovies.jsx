@@ -6,7 +6,7 @@ import { IdContext } from "../context/IdContext";
 
 const NostalgicMovies = () => {
     const [movies, setMovies] = useState([]);
-    const posterURL = "https://image.tmdb.org/t/p/original";
+    const posterURL = "https://image.tmdb.org/t/p/w500";
     const navigate = useNavigate();
     const { setId } = useContext(IdContext);
 

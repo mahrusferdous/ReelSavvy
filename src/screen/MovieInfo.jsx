@@ -58,29 +58,6 @@ const MovieInfo = () => {
                     </Carousel.Item>
                 </Carousel>
 
-                {/* <div
-                    className={styles.title}
-                    style={{
-                        backgroundImage: `url(https://image.tmdb.org/t/p/original${movieInfo.backdrop_path})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                >
-                    <h2>{movieInfo.title}</h2>
-                    <h3>{movieInfo.tagline}</h3>
-
-                    <div>
-                        <button className={styles.heart}>
-                            <img src={iconHeart} alt="heart" />
-                        </button>
-                        <button className={styles.btn}>
-                            <img style={{ width: "30px" }} src={logoPlay} alt="play" /> Play Trailer
-                        </button>
-                    </div>
-
-                    <div className={styles.shade}></div>
-                </div> */}
-
                 <div className="d-flex justify-content-evenly" style={{ background: "black", paddingTop: "20px" }}>
                     <div className={styles.topic}>
                         <h4 style={{ color: "orange" }}>RUNTIME</h4>
@@ -146,7 +123,6 @@ const MovieInfo = () => {
                     </a>
                 </h3>
 
-                {/* <img src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`} alt={movieInfo.title} /> */}
                 {/* <MovieTrailer movieId={movieInfo.id} /> */}
                 <SimilarMovie id={movieInfo.id} />
             </div>

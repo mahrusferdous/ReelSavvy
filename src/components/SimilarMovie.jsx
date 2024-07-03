@@ -3,7 +3,6 @@ import { fetchSimilarMovies } from "../api/tmdbApi";
 import { IdContext } from "../context/IdContext";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/SimilarMovies.module.css";
-import { Container } from "react-bootstrap";
 
 const SimilarMovie = ({ id }) => {
     const [similarMovies, setSimilarMovies] = useState([]);
