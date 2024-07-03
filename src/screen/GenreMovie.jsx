@@ -7,6 +7,7 @@ import MovieProvider from "../components/MovieProvider";
 import Sidebar from "./Sidebar";
 import styles from "../styles/GenrePage.module.css";
 import { IdContext } from "../context/IdContext";
+import { Container } from "react-bootstrap";
 
 const GenreMovie = () => {
     const { genreId } = useParams();
@@ -25,7 +26,7 @@ const GenreMovie = () => {
     }, [genreId]);
 
     return (
-        <div className="d-flex">
+        <Container className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>Genre Movies</h1>
@@ -49,7 +50,7 @@ const GenreMovie = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </Container>
     );
 };
 

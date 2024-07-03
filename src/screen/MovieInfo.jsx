@@ -8,7 +8,7 @@ import Sidebar from "./Sidebar";
 import styles from "../styles/MovieInfo.module.css";
 import logoPlay from "../assets/logos/icon-play.svg";
 import iconHeart from "../assets/logos/icon-heart.svg";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Container } from "react-bootstrap";
 
 const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
@@ -32,7 +32,7 @@ const MovieInfo = () => {
     }
 
     return (
-        <div className="d-flex">
+        <Container className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel controls={false} indicators={false}>
@@ -148,9 +148,9 @@ const MovieInfo = () => {
 
                 {/* <img src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`} alt={movieInfo.title} /> */}
                 {/* <MovieTrailer movieId={movieInfo.id} /> */}
-                <SimilarMovie id={movieInfo.id} />
+                {/* <SimilarMovie id={movieInfo.id} /> */}
             </div>
-        </div>
+        </Container>
     );
 };
 

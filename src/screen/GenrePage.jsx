@@ -4,6 +4,7 @@ import { fetchGenres } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import styles from "../styles/GenrePage.module.css";
+import { Container } from "react-bootstrap";
 
 const GenrePage = () => {
     const [genre, setGenre] = useState([]);
@@ -19,7 +20,7 @@ const GenrePage = () => {
     }, [fetchGenres]);
 
     return (
-        <div className="d-flex">
+        <Container className="d-flex">
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>Genres</h1>
@@ -31,7 +32,7 @@ const GenrePage = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </Container>
     );
 };
 
