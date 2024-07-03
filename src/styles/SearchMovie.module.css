@@ -1,4 +1,22 @@
 .main_content {
     margin-left: 400px; /* Adjust margin to account for side element width */
-    flex-direction: column;
+    display: flex;
+    /* overflow-y: hidden;
+    overflow-x: scroll; */
+    /* flex-direction: column; */
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content {
+    transition: transform 450ms;
+    border-radius: 5px;
+    padding: 20px 0;
+    margin: 10px;
+}
+
+.content img {
+    width: 150px;
+    border-radius: 5px;
 }
