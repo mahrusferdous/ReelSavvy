@@ -30,7 +30,7 @@ const GenreMovie = () => {
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>Genre Movies</h1>
-                <Link to={"/"}>
+                <Link to={"/genre"}>
                     <button>Get Back</button>
                 </Link>
 
