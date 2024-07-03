@@ -15,7 +15,7 @@ const SearchedMovie = ({ movie }) => {
         <div>
             <div className={styles.content}>
                 <Link to={"/movie"} onClick={() => movieProcess()}>
-                    <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                    {movie.poster_path && <img src={`${posterURL}${movie?.poster_path}`} alt={movie.title} />}
                 </Link>
             </div>
         </div>
