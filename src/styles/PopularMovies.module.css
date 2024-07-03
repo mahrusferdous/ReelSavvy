@@ -3,10 +3,13 @@
     overflow-y: hidden;
     overflow-x: scroll;
     background-color: black;
-    margin-left: 400px;
-    padding-top: 50px;
     flex-direction: column;
+}
+
+.content {
+    margin-left: 400px;
     color: white;
+    padding-top: 50px;
 }
 
 .main_content::-webkit-scrollbar {
