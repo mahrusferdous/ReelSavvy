@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import MovieTrailer from "../components/MovieTrailer";
 import MovieProvider from "../components/MovieProvider";
 import Sidebar from "./Sidebar";
-import styles from "../styles/GenrePage.module.css";
+import styles from "../styles/MoodPage.module.css";
 import { IdContext } from "../context/IdContext";
 import { Container } from "react-bootstrap";
 

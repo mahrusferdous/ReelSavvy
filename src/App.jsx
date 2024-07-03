@@ -12,7 +12,7 @@ function App() {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/mood" element={<MoodPage />} />
-            <Route path="/movie/:genreId" element={<GenreMovie />} />
+            {/* <Route path="/movie/:genreId" element={<GenreMovie />} /> */}
             <Route path="/search" element={<SearchMovie />} />
             <Route path="/movie" element={<MovieInfo />} />
             <Route

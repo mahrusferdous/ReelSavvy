@@ -13,3 +13,9 @@
 .main_content h2 {
     margin: 20px;
 }
+
+.moods button {
+    color: white;
+    background-color: transparent;
+    border: none;
+}

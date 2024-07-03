@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchGenres } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import styles from "../styles/GenrePage.module.css";
+import styles from "../styles/MoodPage.module.css";
 import { Container } from "react-bootstrap";
 import EmojiList from "../components/EmojiList";
 import adventurous from "../assets/emojis/gif-adventurous.gif";
@@ -52,23 +52,16 @@ const MoodPage = () => {
     return (
         <div className="d-flex">
             <Sidebar />
-            {/* <div className={styles.main_content}>
-                <h1>Genres</h1>
-                {genre.map((genre) => (
-                    <div key={genre.id}>
-                        <Link to={`/movie/${genre.id}`}>
-                            <h2>{genre.name}</h2>
-                        </Link>
-                    </div>
-                ))}
-            </div> */}
             <div className={styles.main_content}>
                 <h1>What mood are you in right now?</h1>
                 <p>Select a mood to begin receiving movie recommendations on your exact mood.</p>
 
                 <h2>Positive and energetic</h2>
                 <div className={styles.moods}>
-                    <EmojiList mood={adventurous} name="Adventurous" />
+                    {/* <button onClick={}>
+                        <EmojiList mood={adventurous} name="Adventurous" />
+                    </button> */}
+
                     <EmojiList mood={excited} name="Excited" />
                     <EmojiList mood={happy} name="Happy" />
                     <EmojiList mood={upbeat} name="Upbeat" />
