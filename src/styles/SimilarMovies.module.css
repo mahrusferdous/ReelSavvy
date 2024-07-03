@@ -1,12 +1,11 @@
 .main_content {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    background-color: black;
-    flex-direction: column;
+    /* overflow-y: hidden;
+    overflow-x: scroll; */
+    /* flex-direction: column; */
     color: white;
-    /* width: 1450px; */
-    width: 77.7vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main_content::-webkit-scrollbar {
@@ -18,18 +17,11 @@
     scrollbar-width: none; /* Firefox */
 }
 
-.main_content div {
-    display: flex;
-    flex-direction: row;
-}
-
 .poster {
-    object-fit: contain;
-    width: 355.859px;
-    margin-left: 20px;
     transition: transform 450ms;
     border-radius: 5px;
-    padding: 50px 0;
+    padding: 20px 0;
+    margin: 10px;
 }
 
 .poster img {
