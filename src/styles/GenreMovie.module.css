@@ -1,4 +1,43 @@
 .main_content {
-    margin-left: 400px; /* Adjust margin to account for side element width */
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    background-color: black;
     flex-direction: column;
+    margin-left: 400px;
+}
+
+.content {
+    margin-left: 400px;
+    color: white;
+    padding-top: 50px;
+    background-color: black;
+}
+
+.main_content::-webkit-scrollbar {
+    display: none;
+}
+
+.main_content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.main_content div {
+    display: flex;
+    flex-direction: row;
+}
+
+.poster {
+    object-fit: contain;
+    width: 355.859px;
+    margin-left: 20px;
+    transition: transform 450ms;
+    border-radius: 5px;
+    padding: 50px 0;
+}
+
+.poster img {
+    width: 150px;
+    border-radius: 5px;
 }

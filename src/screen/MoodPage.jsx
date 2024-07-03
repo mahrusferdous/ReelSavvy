@@ -71,38 +71,88 @@ const MoodPage = () => {
                         <EmojiList mood={adventurous} name="Adventurous" />
                     </button>
 
-                    <EmojiList mood={excited} name="Excited" />
-                    <EmojiList mood={happy} name="Happy" />
-                    <EmojiList mood={upbeat} name="Upbeat" />
+                    <button>
+                        <EmojiList mood={excited} name="Excited" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={happy} name="Happy" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={upbeat} name="Upbeat" />
+                    </button>
                 </div>
 
                 <hr />
 
                 <h2>Reflective and thoughtful</h2>
                 <div className={styles.moods}>
-                    <EmojiList mood={curious} name="Curious" />
-                    <EmojiList mood={imaginative} name="Imaginative" />
-                    <EmojiList mood={intrigued} name="Intrigued" />
-                    <EmojiList mood={reflective} name="Reflective" />
-                    <EmojiList mood={thoughtful} name="Thoughtful" />
+                    <button>
+                        <EmojiList mood={curious} name="Curious" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={imaginative} name="Imaginative" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={intrigued} name="Intrigued" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={reflective} name="Reflective" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={thoughtful} name="Thoughtful" />
+                    </button>
                 </div>
 
                 <h2>Sensitive and emotional</h2>
                 <div className={styles.moods}>
-                    <EmojiList mood={nostalgic} name="Nostalgic" />
-                    <EmojiList mood={romantic} name="Romantic" />
-                    <EmojiList mood={scared} name="Scared" />
-                    <EmojiList mood={sentimental} name="Sentimental" />
-                    <EmojiList mood={warm} name="Warm" />
+                    <button>
+                        <EmojiList mood={nostalgic} name="Nostalgic" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={romantic} name="Romantic" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={scared} name="Scared" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={sentimental} name="Sentimental" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={warm} name="Warm" />
+                    </button>
                 </div>
 
                 <h2>Intense and serious</h2>
                 <div className={styles.moods}>
-                    <EmojiList mood={futuristic} name="Futuristic" />
-                    <EmojiList mood={intense} name="Intense" />
-                    <EmojiList mood={light_hearted} name="Light-hearted" />
-                    <EmojiList mood={serious} name="Serious" />
-                    <EmojiList mood={suspenseful} name="Suspenseful" />
+                    <button>
+                        <EmojiList mood={futuristic} name="Futuristic" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={intense} name="Intense" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={light_hearted} name="Light-hearted" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={serious} name="Serious" />
+                    </button>
+
+                    <button>
+                        <EmojiList mood={suspenseful} name="Suspenseful" />
+                    </button>
                 </div>
             </div>
         </div>

@@ -5,6 +5,8 @@
     background-color: black;
     flex-direction: column;
     margin-left: 400px;
+    color: white;
+    width: 100%;
 }
 
 .main_content::-webkit-scrollbar {
@@ -16,12 +18,12 @@
     scrollbar-width: none; /* Firefox */
 }
 
-.main_content div {
+/* .main_content div {
     display: flex;
     flex-direction: row;
-}
+} */
 
-.poster {
+/* .poster {
     object-fit: contain;
     width: 355.859px;
     margin-left: 20px;
@@ -33,4 +35,10 @@
 .poster img {
     width: 150px;
     border-radius: 5px;
+} */
+
+.moods button {
+    background-color: transparent;
+    color: white;
+    border: none;
 }

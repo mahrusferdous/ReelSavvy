@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { fetchGenreMovies } from "../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import styles from "../styles/MoodPage.module.css";
+import styles from "../styles/GenreMovie.module.css";
 import { IdContext } from "../context/IdContext";
 
 const GenreMovie = ({ genreId }) => {
