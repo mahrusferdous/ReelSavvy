@@ -30,7 +30,7 @@ const GenreMovie = ({ genreId }) => {
                 {genreMovies.map((movie) => (
                     <div key={movie.id} className={styles.poster}>
                         <Link to={"/movie"} onClick={() => setId(movie.id)}>
-                            <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                            {movie.poster_path && <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />}
                         </Link>
                     </div>
                 ))}
