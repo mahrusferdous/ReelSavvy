@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import { fetchGenres } from "../api/tmdbApi";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import styles from "../styles/MoodPage.module.css";
 import { Container } from "react-bootstrap";
@@ -25,8 +25,12 @@ import intense from "../assets/emojis/gif-intense.gif";
 import light_hearted from "../assets/emojis/gif-light-hearted.gif";
 import serious from "../assets/emojis/gif-serious.gif";
 import suspenseful from "../assets/emojis/gif-suspenseful.gif";
+import { IdsContext } from "../context/IdsContext";
 
 const MoodPage = () => {
+    const { setIds } = useContext(IdsContext);
+    const navigate = useNavigate();
+
     [
         { id: 28, name: "Action" },
         { id: 12, name: "Adventure" }, //
@@ -58,9 +62,14 @@ const MoodPage = () => {
 
                 <h2>Positive and energetic</h2>
                 <div className={styles.moods}>
-                    {/* <button onClick={}>
+                    <button
+                        onClick={() => {
+                            setIds([12, 37]);
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={adventurous} name="Adventurous" />
-                    </button> */}
+                    </button>
 
                     <EmojiList mood={excited} name="Excited" />
                     <EmojiList mood={happy} name="Happy" />

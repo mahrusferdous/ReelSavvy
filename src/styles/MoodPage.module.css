@@ -1,21 +1,36 @@
 .main_content {
-    margin-left: 400px; /* Adjust margin to account for side element width */
-    flex-direction: column;
-    color: white;
-    background-color: #050505;
-    width: 100%;
-}
-
-.moods {
     display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    background-color: black;
+    flex-direction: column;
+    margin-left: 400px;
 }
 
-.main_content h2 {
-    margin: 20px;
+.main_content::-webkit-scrollbar {
+    display: none;
 }
 
-.moods button {
-    color: white;
-    background-color: transparent;
-    border: none;
+.main_content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.main_content div {
+    display: flex;
+    flex-direction: row;
+}
+
+.poster {
+    object-fit: contain;
+    width: 355.859px;
+    margin-left: 20px;
+    transition: transform 450ms;
+    border-radius: 5px;
+    padding: 50px 0;
+}
+
+.poster img {
+    width: 150px;
+    border-radius: 5px;
 }

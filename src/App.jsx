@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import MovieList from "./components/MovieList";
 import { Routes, Route } from "react-router-dom";
 import MoodPage from "./screen/MoodPage.jsx";
-import GenreMovie from "./screen/GenreMovie.jsx";
+import GenrePage from "./screen/GenrePage.jsx";
 import SearchMovie from "./screen/SearchMovie.jsx";
 import MovieInfo from "./screen/MovieInfo.jsx";
 import HomePage from "./screen/HomePage.jsx";
@@ -12,7 +12,7 @@ function App() {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/mood" element={<MoodPage />} />
-            {/* <Route path="/movie/:genreId" element={<GenreMovie />} /> */}
+            <Route path="/genre" element={<GenrePage />} />
             <Route path="/search" element={<SearchMovie />} />
             <Route path="/movie" element={<MovieInfo />} />
             <Route
