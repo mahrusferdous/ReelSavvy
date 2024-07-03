@@ -21,21 +21,23 @@ const NostalgicMovies = () => {
     }, [fetchNostalgicMovies]);
 
     return (
-        <div className={styles.main_content}>
+        <div className={styles.content}>
             <h1>Nostalgic Movies</h1>
-            <div>
-                {movies.map((movie) => (
-                    <div
-                        key={movie.id}
-                        onClick={() => {
-                            setId(movie.id);
-                            navigate("/movie");
-                        }}
-                        className={styles.poster}
-                    >
-                        <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
-                    </div>
-                ))}
+            <div className={styles.main_content}>
+                <div>
+                    {movies.map((movie) => (
+                        <div
+                            key={movie.id}
+                            onClick={() => {
+                                setId(movie.id);
+                                navigate("/movie");
+                            }}
+                            className={styles.poster}
+                        >
+                            <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
