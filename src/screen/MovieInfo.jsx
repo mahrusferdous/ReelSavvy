@@ -14,6 +14,7 @@ const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
     const { id } = useContext(IdContext);
     const posterURL = "https://image.tmdb.org/t/p/original";
+    const [trailer, setTrailer] = useState(false);
 
     useEffect(() => {
         fetchMovieInfo(id)
@@ -24,8 +25,6 @@ const MovieInfo = () => {
                 console.error("Error fetching movie info:", error);
             });
     }, [id, fetchMovieInfo]);
-
-    // console.log(movieInfo);
 
     if (!movieInfo) {
         return <h1>Loading...</h1>;
@@ -50,7 +49,12 @@ const MovieInfo = () => {
                                 <button className={styles.heart}>
                                     <img src={iconHeart} alt="heart" />
                                 </button>
-                                <button className={styles.btn}>
+                                <button
+                                    className={styles.btn}
+                                    onClick={() => {
+                                        setTrailer(!trailer);
+                                    }}
+                                >
                                     <img style={{ width: "30px" }} src={logoPlay} alt="play" /> Play Trailer
                                 </button>
                             </div>
@@ -123,7 +127,13 @@ const MovieInfo = () => {
                     </a>
                 </h3>
 
-                {/* <MovieTrailer movieId={movieInfo.id} /> */}
+                {trailer ? (
+                    <div onClick={() => setTrailer(!trailer)}>
+                        <MovieTrailer movieId={movieInfo.id} />
+                    </div>
+                ) : (
+                    <p>Loading trailer...</p>
+                )}
                 <SimilarMovie id={movieInfo.id} />
             </div>
         </div>

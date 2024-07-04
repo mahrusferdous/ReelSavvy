@@ -87,3 +87,16 @@
     justify-content: center;
     margin: 20px;
 }
+
+.trailer {
+    position: fixed; /* Use fixed positioning to cover the full viewport */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it overlays other content */
+}

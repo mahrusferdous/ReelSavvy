@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchMovieTrailer } from "../api/tmdbApi";
+import styles from "../styles/MovieInfo.module.css";
 
 const MovieTrailer = ({ movieId }) => {
     const [trailers, setTrailers] = useState(null); // Initialize with null
@@ -25,15 +26,12 @@ const MovieTrailer = ({ movieId }) => {
     }, [trailers]);
 
     return (
-        <div>
+        <div className={styles.trailer}>
             {trailer ? (
                 <div key={trailer.id}>
-                    <h3>{trailer.name}</h3>
-                    <h3>{trailer.published_at}</h3>
-                    <h3>{trailer.type}</h3>
                     <iframe
-                        width="560"
-                        height="315"
+                        width="1120"
+                        height="620"
                         src={`https://www.youtube.com/embed/${trailer.key}`}
                         title={trailer.name}
                         allowFullScreen
