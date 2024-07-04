@@ -11,6 +11,10 @@
     scrollbar-width: none;
 }
 
+.sidebar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
 .gap {
     min-width: 400px;
     min-height: 100vh;
