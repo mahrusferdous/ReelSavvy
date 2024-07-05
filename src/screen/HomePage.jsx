@@ -41,28 +41,31 @@ const HomePage = () => {
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel className={styles.caption}>
-                    {movies.map((movie) => (
-                        <Carousel.Item
-                            key={movie.id}
-                            onClick={() => {
-                                setId(movie.id);
-                                navigation("/movie");
-                            }}
-                        >
-                            <img
-                                className="d-block w-100"
-                                src={`${posterURL}${movie.backdrop_path}`}
-                                alt={movie.title}
-                            />
-                            <Carousel.Caption>
-                                <p className={styles.captionP}>TOP RECOMMENDED MOVIES</p>
-                                <h1>{movie.title}</h1>
-                                <button className={styles.heart}>
-                                    <img src={iconHeart} alt="heart" />
-                                </button>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    ))}
+                    {movies.map(
+                        (movie) =>
+                            movie.backdrop_path && (
+                                <Carousel.Item
+                                    key={movie.id}
+                                    onClick={() => {
+                                        setId(movie.id);
+                                        navigation("/movie");
+                                    }}
+                                >
+                                    <img
+                                        className="d-block w-100"
+                                        src={`${posterURL}${movie.backdrop_path}`}
+                                        alt={movie.title}
+                                    />
+                                    <Carousel.Caption>
+                                        <p className={styles.captionP}>TOP RECOMMENDED MOVIES</p>
+                                        <h1>{movie.title}</h1>
+                                        <button className={styles.heart}>
+                                            <img src={iconHeart} alt="heart" />
+                                        </button>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            )
+                    )}
                 </Carousel>
             </div>
 
