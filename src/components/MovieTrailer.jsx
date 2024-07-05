@@ -30,8 +30,8 @@ const MovieTrailer = ({ movieId }) => {
             {trailer ? (
                 <div key={trailer.id}>
                     <iframe
-                        width="1120"
-                        height="620"
+                        width="800"
+                        height="450"
                         src={`https://www.youtube.com/embed/${trailer.key}`}
                         title={trailer.name}
                         allowFullScreen
