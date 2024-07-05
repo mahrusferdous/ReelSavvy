@@ -27,10 +27,12 @@ import serious from "../assets/emojis/gif-serious.gif";
 import suspenseful from "../assets/emojis/gif-suspenseful.gif";
 import { IdsContext } from "../context/IdsContext";
 import { MoodContext } from "../context/MoodContext";
+import { MoodSentenceContext } from "../context/MoodSentenceContext";
 
 const MoodPage = () => {
     const { setIds } = useContext(IdsContext);
     const { setMood } = useContext(MoodContext);
+    const { setMoodSentence } = useContext(MoodSentenceContext);
     const navigate = useNavigate();
 
     [
@@ -68,6 +70,7 @@ const MoodPage = () => {
                         onClick={() => {
                             setIds([12, 37]);
                             setMood("Adventurous");
+                            setMoodSentence("Would you prefer an action-packed adventure or a classic western?");
                             navigate("/genre");
                         }}
                     >

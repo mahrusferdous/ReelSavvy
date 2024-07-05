@@ -4,38 +4,19 @@ import GenreMovie from "./GenreMovie";
 import Sidebar from "./Sidebar";
 import { MoodContext } from "../context/MoodContext";
 import styles from "../styles/GenrePage.module.css";
+import { MoodSentenceContext } from "../context/MoodSentenceContext";
 
 const GenrePage = () => {
     const { ids } = useContext(IdsContext);
     const { mood } = useContext(MoodContext);
-
-    const genres = [
-        { id: 28, name: "Action" },
-        { id: 12, name: "Adventure" }, //
-        { id: 16, name: "Animation" },
-        { id: 35, name: "Comedy" },
-        { id: 80, name: "Crime" },
-        { id: 99, name: "Documentary" },
-        { id: 18, name: "Drama" },
-        { id: 10751, name: "Family" },
-        { id: 14, name: "Fantasy" },
-        { id: 36, name: "History" },
-        { id: 27, name: "Horror" },
-        { id: 10402, name: "Music" },
-        { id: 9648, name: "Mystery" },
-        { id: 10749, name: "Romance" },
-        { id: 878, name: "Science Fiction" },
-        { id: 10770, name: "TV Movie" },
-        { id: 53, name: "Thriller" },
-        { id: 10752, name: "War" },
-        { id: 37, name: "Western" }, //
-    ];
+    const { moodSentence } = useContext(MoodSentenceContext);
 
     return (
         <div>
             <Sidebar />
 
             <h1 className={styles.main_content}>Because you selected the {mood} mood...</h1>
+            <p className={styles.main_content}>{moodSentence}</p>
             {ids.map((id) => (
                 <div key={id}>
                     <GenreMovie genreId={id} />

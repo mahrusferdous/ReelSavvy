@@ -9,6 +9,7 @@ import { MovieProvider } from "./context/MovieContext.jsx";
 import { IdProvider } from "./context/IdContext.jsx";
 import { IdsProvider } from "./context/IdsContext.jsx";
 import { MoodProvider } from "./context/MoodContext.jsx";
+import { MoodSentenceProvider } from "./context/MoodSentenceContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <IdProvider>
                     <IdsProvider>
                         <MoodProvider>
-                            <App />
+                            <MoodSentenceProvider>
+                                <App />
+                            </MoodSentenceProvider>
                         </MoodProvider>
                     </IdsProvider>
                 </IdProvider>
