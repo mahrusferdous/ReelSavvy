@@ -51,7 +51,7 @@ const GenreMovie = ({ genreId }) => {
     return (
         <div className={styles.main_content}>
             <h2 style={{ color: "white" }} key={genreId}>
-                {genreName}
+                {genreName} Movies
             </h2>
             <div>
                 {genreMovies.map((movie) => (

@@ -26,9 +26,11 @@ import light_hearted from "../assets/emojis/gif-light-hearted.gif";
 import serious from "../assets/emojis/gif-serious.gif";
 import suspenseful from "../assets/emojis/gif-suspenseful.gif";
 import { IdsContext } from "../context/IdsContext";
+import { MoodContext } from "../context/MoodContext";
 
 const MoodPage = () => {
     const { setIds } = useContext(IdsContext);
+    const { setMood } = useContext(MoodContext);
     const navigate = useNavigate();
 
     [
@@ -65,6 +67,7 @@ const MoodPage = () => {
                     <button
                         onClick={() => {
                             setIds([12, 37]);
+                            setMood("Adventurous");
                             navigate("/genre");
                         }}
                     >

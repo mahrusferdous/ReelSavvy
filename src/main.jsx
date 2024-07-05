@@ -8,6 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { MovieProvider } from "./context/MovieContext.jsx";
 import { IdProvider } from "./context/IdContext.jsx";
 import { IdsProvider } from "./context/IdsContext.jsx";
+import { MoodProvider } from "./context/MoodContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <MovieProvider>
                 <IdProvider>
                     <IdsProvider>
-                        <App />
+                        <MoodProvider>
+                            <App />
+                        </MoodProvider>
                     </IdsProvider>
                 </IdProvider>
             </MovieProvider>
