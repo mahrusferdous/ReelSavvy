@@ -58,11 +58,13 @@ const MoodPage = () => {
     ];
 
     return (
-        <div className="d-flex">
+        <div className="d-flex" style={{ background: "#171717" }}>
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>What mood are you in right now?</h1>
-                <p>Select a mood to begin receiving movie recommendations on your exact mood.</p>
+                <p style={{ color: "#D3D3D3" }}>
+                    Select a mood to begin receiving movie recommendations on your exact mood.
+                </p>
 
                 <h2>Positive and energetic</h2>
                 <div className={styles.moods}>
@@ -115,6 +117,8 @@ const MoodPage = () => {
                     </button>
                 </div>
 
+                <hr />
+
                 <h2>Sensitive and emotional</h2>
                 <div className={styles.moods}>
                     <button>
@@ -137,6 +141,8 @@ const MoodPage = () => {
                         <EmojiList mood={warm} name="Warm" />
                     </button>
                 </div>
+
+                <hr />
 
                 <h2>Intense and serious</h2>
                 <div className={styles.moods}>
