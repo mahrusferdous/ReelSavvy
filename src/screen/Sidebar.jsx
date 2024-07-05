@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Sidebar.module.css";
-import logoLoader from "../assets/logos/icon-loader.svg";
+import logoLoader from "../assets/logos/icon-face-smile.svg";
 import logoHome from "../assets/logos/icon-home.svg";
-import logoDiscovery from "../assets/logos/icon-frame.svg";
+import logoDiscovery from "../assets/logos/icon-video-camera.svg";
 import logoCommunity from "../assets/logos/icon-group.svg";
-import logoRecent from "../assets/logos/icon-clock.svg";
-import logoCollection from "../assets/logos/icon-star.svg";
+import logoRecent from "../assets/logos/icon-folder.svg";
+import logoCollection from "../assets/logos/icon-heart-clean.svg";
 import logoSettings from "../assets/logos/icon-settings.svg";
 import logoHelp from "../assets/logos/icon-question.svg";
 import logoReelsavvy from "../assets/logos/reelsavvy_logo.png";
@@ -48,7 +48,7 @@ const Sidebar = () => {
                     <img src={logoSettings} alt="settings" /> Settings
                 </Link>
                 <Link to="/" className={styles.navLink}>
-                    <img src={logoHelp} alt="help" /> Help
+                    <img src={logoHelp} alt="logout" /> Logout
                 </Link>
             </nav>
         </div>

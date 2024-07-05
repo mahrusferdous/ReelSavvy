@@ -6,7 +6,7 @@ import { MovieContext } from "../context/MovieContext.jsx";
 import { useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
-    const { movie, setMovie } = useContext(MovieContext);
+    const { setMovie } = useContext(MovieContext);
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
 
@@ -41,8 +41,6 @@ const SearchBox = () => {
                     </button>
                 </div>
             </form>
-
-            {/* {movie && movie.map((movie) => <SearchMovie movie={movie} />)} */}
         </div>
     );
 };
