@@ -16,6 +16,13 @@
 
 .main_content p {
     color: #d3d3d3;
+    margin-bottom: 40px;
+}
+
+.main_content h2 {
+    font-size: 20px;
+    margin: 40px 0 15px 10px;
+    font-weight: 400;
 }
 
 .main_content::-webkit-scrollbar {
@@ -50,4 +57,9 @@
     background-color: transparent;
     color: white;
     border: none;
+}
+
+.main_content hr {
+    border: 0.1px solid #9e9e9e50;
+    margin: 0;
 }

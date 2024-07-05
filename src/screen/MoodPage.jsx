@@ -58,13 +58,11 @@ const MoodPage = () => {
     ];
 
     return (
-        <div className="d-flex" style={{ background: "#171717" }}>
+        <div className="d-flex" style={{ background: "#050505" }}>
             <Sidebar />
             <div className={styles.main_content}>
                 <h1>What mood are you in right now?</h1>
-                <p style={{ color: "#D3D3D3" }}>
-                    Select a mood to begin receiving movie recommendations on your exact mood.
-                </p>
+                <p>Select a mood to begin receiving movie recommendations on your exact mood.</p>
 
                 <h2>Positive and energetic</h2>
                 <div className={styles.moods}>
