@@ -8,7 +8,7 @@ import logoCommunity from "../assets/logos/icon-group.svg";
 import logoRecent from "../assets/logos/icon-folder.svg";
 import logoCollection from "../assets/logos/icon-heart-clean.svg";
 import logoSettings from "../assets/logos/icon-settings.svg";
-import logoHelp from "../assets/logos/icon-question.svg";
+import logoHelp from "../assets/logos/icon-power.svg";
 import logoReelsavvy from "../assets/logos/reelsavvy_logo.png";
 import SearchBox from "../components/SearchBox";
 
