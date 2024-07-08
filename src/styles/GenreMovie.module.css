@@ -1,10 +1,13 @@
+.main {
+    margin-left: 377px;
+    background-color: black;
+}
+
 .main_content {
     display: flex;
+    flex-direction: column;
     overflow-y: hidden;
     overflow-x: scroll;
-    background-color: black;
-    flex-direction: column;
-    margin-left: 377px;
 }
 
 .content {

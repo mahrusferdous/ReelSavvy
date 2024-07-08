@@ -49,18 +49,22 @@ const GenreMovie = ({ genreId }) => {
     const genreName = genres.find((genre) => genre.id === genreId).name;
 
     return (
-        <div className={styles.main_content}>
-            <h2 style={{ color: "white" }} key={genreId}>
+        <div className={styles.main}>
+            <h2 style={{ color: "white", fontSize: "25px" }} key={genreId}>
                 {genreName} Movies
             </h2>
-            <div>
-                {genreMovies.map((movie) => (
-                    <div key={movie.id} className={styles.poster}>
-                        <Link to={"/movie"} onClick={() => setId(movie.id)}>
-                            {movie.poster_path && <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />}
-                        </Link>
-                    </div>
-                ))}
+            <div className={styles.main_content}>
+                <div>
+                    {genreMovies.map((movie) => (
+                        <div key={movie.id} className={styles.poster}>
+                            <Link to={"/movie"} onClick={() => setId(movie.id)}>
+                                {movie.poster_path && (
+                                    <img src={`${posterURL}${movie.poster_path}`} alt={movie.title} />
+                                )}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
