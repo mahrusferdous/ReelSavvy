@@ -175,7 +175,7 @@ const MoodPage = () => {
                             setIds([99, 18, 36]);
                             setMood("Thoughtful");
                             setMoodSentence(
-                                "DO you prefer a thought-provoking documentary, a captivating drama, or a historical history?"
+                                "Do you prefer a thought-provoking documentary, a captivating drama, or a historical history?"
                             );
                             navigate("/genre");
                         }}
@@ -188,15 +188,42 @@ const MoodPage = () => {
 
                 <h2>Sensitive and emotional</h2>
                 <div className={styles.moods}>
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([16, 10402, 37]);
+                            setMood("Nostalgic");
+                            setMoodSentence(
+                                "Do you prefer an animated movie, a music-themed movie, or a classic Western?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={nostalgic} name="Nostalgic" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([10749, 35, 10751]);
+                            setMood("Romantic");
+                            setMoodSentence(
+                                "Are you looking for a romantic drama, a romantic comedy, or a heartwarming family film?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={romantic} name="Romantic" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([27, 53, 9648]);
+                            setMood("Scared");
+                            setMoodSentence(
+                                "Do you prefer a horror movie, a thrilling thriller, or a mysterious mystery?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={scared} name="Scared" />
                     </button>
 
