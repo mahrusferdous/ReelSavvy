@@ -8,7 +8,11 @@ import Sidebar from "./Sidebar";
 import styles from "../styles/MovieInfo.module.css";
 import logoPlay from "../assets/logos/icon-play.svg";
 import iconHeart from "../assets/logos/icon-heart.svg";
-import { Carousel, Container } from "react-bootstrap";
+import iconGenre from "../assets/logos/icon-genre.svg";
+import iconPlatform from "../assets/logos/icon-platform.svg";
+import iconLanguage from "../assets/logos/icon-language.svg";
+import iconPopular from "../assets/logos/icon-popular.svg";
+import { Carousel } from "react-bootstrap";
 
 const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
@@ -89,21 +93,56 @@ const MovieInfo = () => {
 
                     {/* Right Column */}
                     <div className={styles.rightColumn}>
-                        <p>{movieInfo.genres && movieInfo.genres.map((genre) => genre.name).join(", ")}</p>
+                        <div>
+                            <div>
+                                <div className={styles.rightTitle}>
+                                    <img src={iconGenre} alt="Genre" />
+                                    <p>Genre</p>
+                                </div>
+                                <div className={styles.rightBox}>
+                                    {movieInfo.genres &&
+                                        movieInfo.genres.map((genre) => (
+                                            <p key={genre.id} className={styles.rightBox}>
+                                                {genre.name}
+                                            </p>
+                                        ))}
+                                </div>
+                            </div>
 
-                        <MovieProvider movieId={movieInfo.id} />
+                            <div>
+                                <div className={styles.rightTitle}>
+                                    <img src={iconPlatform} alt="Platform" />
+                                    <p>Available Streaming Platforms</p>
+                                </div>
 
-                        <p>
-                            Spoken Languages:{" "}
-                            {movieInfo.spoken_languages &&
-                                movieInfo.spoken_languages.map((language) => language.name).join(", ")}
-                        </p>
+                                <MovieProvider movieId={movieInfo.id} />
+                            </div>
 
-                        <p>Popularity: {movieInfo.popularity}</p>
+                            <div>
+                                <div className={styles.rightTitle}>
+                                    <img src={iconLanguage} alt="Language" />
+                                    <p>Available Language for Closed Captions</p>
+                                </div>
+                                <div className={styles.rightBox}>
+                                    {movieInfo.spoken_languages &&
+                                        movieInfo.spoken_languages.map((language) => <p>{language.name}</p>)}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div className={styles.rightTitle}>
+                                    <img src={iconPopular} alt="Popular" />
+                                    <p>Popularity</p>
+                                </div>
+                                <div className={styles.rightBox}>
+                                    <p>{movieInfo.popularity}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <h3>
+                {/* <h3>
                     Production Companies:{" "}
                     {movieInfo.production_companies &&
                         movieInfo.production_companies.map((company) => company.name).join(", ")}
@@ -121,14 +160,12 @@ const MovieInfo = () => {
                     <a href={movieInfo.homepage ? movieInfo.homepage : "https://www.themoviedb.org/"}>
                         {movieInfo.homepage}
                     </a>
-                </h3>
+                </h3> */}
 
-                {trailer ? (
+                {trailer && (
                     <div onClick={() => setTrailer(!trailer)}>
                         <MovieTrailer movieId={movieInfo.id} />
                     </div>
-                ) : (
-                    <p>Loading trailer...</p>
                 )}
                 <SimilarMovie id={movieInfo.id} />
             </div>

@@ -86,6 +86,10 @@
     flex-direction: column;
     justify-content: center;
     margin: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin-right: 30%;
+    color: #d3d3d3;
 }
 
 .trailer {
@@ -103,4 +107,36 @@
 
 .trailer div {
     border: 5px solid white;
+}
+
+.rightColumn > div {
+    padding: 30px;
+}
+
+.rightColumn > h5 {
+    color: white;
+}
+
+.rightTitle {
+    display: flex;
+    margin: 10px;
+}
+
+.rightTitle img,
+.rightTitle p {
+    margin: 2px;
+}
+
+.rightBox > p {
+    padding: 10px;
+    margin: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.rightBox {
+    display: flex;
+    flex-wrap: wrap;
 }

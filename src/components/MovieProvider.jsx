@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchMovieProvider } from "../api/tmdbApi";
+import styles from "../styles/MovieInfo.module.css";
 
 const MovieProvider = ({ movieId }) => {
     const [movie, setMovie] = useState([]);
@@ -17,18 +18,14 @@ const MovieProvider = ({ movieId }) => {
     return (
         <div>
             {movie && (
-                <div id={movieId}>
-                    <p>Available Streaming Platform</p>
+                <div id={movieId} className={styles.rightBox}>
+                    {/* <p>Available Streaming Platform</p> */}
                     {movie.flatrate?.map((e) => (
-                        <div key={e.provider_id}>
-                            <p>Provider: {e.provider_name}</p>
-                        </div>
+                        <p key={e.provider_id}>{e.provider_name}</p>
                     ))}
-                    <p>Available on Stores</p>
+                    {/* <p>Available on Stores</p> */}
                     {movie.buy?.map((e) => (
-                        <div key={e.provider_id}>
-                            <p>Buy: {e.provider_name}</p>
-                        </div>
+                        <p key={e.provider_id}>{e.provider_name}</p>
                     ))}
                 </div>
             )}
