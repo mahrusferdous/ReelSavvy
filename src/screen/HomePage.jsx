@@ -9,6 +9,7 @@ import iconHeart from "../assets/logos/icon-heart.svg";
 import PopularMovies from "../components/PopularMovies";
 import SentimentalMovies from "../components/SentimentalMovies";
 import NostalgicMovies from "../components/NostalgicMovies";
+import Footer from "./Footer";
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -72,6 +73,8 @@ const HomePage = () => {
             <PopularMovies />
             <SentimentalMovies />
             <NostalgicMovies />
+
+            <Footer />
         </div>
     );
 };

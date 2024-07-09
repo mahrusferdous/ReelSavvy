@@ -38,7 +38,7 @@ const MovieTrailer = ({ movieId }) => {
                     ></iframe>
                 </div>
             ) : (
-                <p>Loading trailer...</p> // Loading state or message
+                <p style={{ color: "white" }}>Not Available</p> // Loading state or message
             )}
         </div>
     );

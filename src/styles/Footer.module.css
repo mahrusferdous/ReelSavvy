@@ -1,0 +1,18 @@
+.main_content {
+    margin-left: 377px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+.main_content div {
+    display: flex;
+    color: #9e9e9e;
+}
+
+.main_content p {
+    margin: 0 20px;
+}
