@@ -3,9 +3,9 @@ import { fetchMovieTrailer } from "../api/tmdbApi";
 import styles from "../styles/MovieInfo.module.css";
 
 const MovieTrailer = ({ movieId }) => {
-    const [trailers, setTrailers] = useState(null); // Initialize with null
-    const [trailer, setTrailer] = useState(null); // Initialize with null
-    const [text, setText] = useState("Loading..."); // Initialize with null
+    const [trailers, setTrailers] = useState(null);
+    const [trailer, setTrailer] = useState(null);
+    const [text, setText] = useState("Loading...");
 
     useEffect(() => {
         // Fetch the movie trailers when movieId changes
