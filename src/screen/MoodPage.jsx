@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
-import { useEffect, useState } from "react";
-import { fetchGenres } from "../api/tmdbApi";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import styles from "../styles/MoodPage.module.css";
-import { Container } from "react-bootstrap";
 import EmojiList from "../components/EmojiList";
 import adventurous from "../assets/emojis/gif-adventurous.gif";
 import excited from "../assets/emojis/gif-excited.gif";
@@ -37,11 +34,11 @@ const MoodPage = () => {
 
     [
         { id: 28, name: "Action" },
-        { id: 12, name: "Adventure" }, //
+        { id: 12, name: "Adventure" },
         { id: 16, name: "Animation" },
         { id: 35, name: "Comedy" },
         { id: 80, name: "Crime" },
-        { id: 99, name: "Documentary" },
+        { id: 99, name: "Documentary" }, //
         { id: 18, name: "Drama" },
         { id: 10751, name: "Family" },
         { id: 14, name: "Fantasy" },
@@ -50,11 +47,11 @@ const MoodPage = () => {
         { id: 10402, name: "Music" },
         { id: 9648, name: "Mystery" },
         { id: 10749, name: "Romance" },
-        { id: 878, name: "Science Fiction" },
+        { id: 878, name: "Science Fiction" }, //
         { id: 10770, name: "TV Movie" },
-        { id: 53, name: "Thriller" },
+        { id: 53, name: "Thriller" }, //
         { id: 10752, name: "War" },
-        { id: 37, name: "Western" }, //
+        { id: 37, name: "Western" },
     ];
 
     return (
@@ -77,15 +74,42 @@ const MoodPage = () => {
                         <EmojiList mood={adventurous} name="Adventurous" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([28, 12, 53]);
+                            setMood("Excited");
+                            setMoodSentence(
+                                "Are you in the mood for an adrenaline-fueled action, a trilling adventure, or an intese triller?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={excited} name="Excited" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([35, 10751, 18]);
+                            setMood("Happy");
+                            setMoodSentence(
+                                "Would you like to watch an animated comedy, a feel-good family film, or a heartwarming drama?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={happy} name="Happy" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([35, 10749, 10402]);
+                            setMood("Upbeat");
+                            setMoodSentence(
+                                "Are you in the mood for an animated comedy, a light-hearted romance, or an upbeat music-themed movie?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={upbeat} name="Upbeat" />
                     </button>
                 </div>
@@ -94,23 +118,68 @@ const MoodPage = () => {
 
                 <h2>Reflective and thoughtful</h2>
                 <div className={styles.moods}>
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([53, 99, 878]);
+                            setMood("Curious");
+                            setMoodSentence(
+                                "Are you interested in a mysterious thriller, a thought-provoking  documentary, or an imaginative science fiction?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={curious} name="Curious" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([14, 878, 12]);
+                            setMood("Imaginative");
+                            setMoodSentence(
+                                "Do you prefer an animated fantasy, a captivating science fiction, or an adventurous fantasy?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={imaginative} name="Imaginative" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([53, 878, 99]);
+                            setMood("Intrigued");
+                            setMoodSentence(
+                                "Do you prefer an animated fantasy, a captivating science fiction, or an adventurous fantasy?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={intrigued} name="Intrigued" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([36, 99, 10752]);
+                            setMood("Reflective");
+                            setMoodSentence(
+                                "Would you like to watch a historical drama, a thought-provoking documentary, or a war movie?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={reflective} name="Reflective" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([99, 18, 36]);
+                            setMood("Thoughtful");
+                            setMoodSentence(
+                                "DO you prefer a thought-provoking documentary, a captivating drama, or a historical history?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={thoughtful} name="Thoughtful" />
                     </button>
                 </div>
