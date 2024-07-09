@@ -3,7 +3,6 @@ import { MovieContext } from "../context/MovieContext";
 import SearchedMovie from "../components/SearchedMovie";
 import Sidebar from "./Sidebar";
 import styles from "../styles/SearchMovie.module.css";
-import { Container } from "react-bootstrap";
 
 const SearchMovie = () => {
     const { movie } = useContext(MovieContext);
