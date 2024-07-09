@@ -1,7 +1,7 @@
 .main_content {
     margin-left: 377px; /* Adjust margin to account for side element width */
     flex-direction: column;
-    background-color: black;
+    background-color: #050505;
 }
 
 .captionP {
