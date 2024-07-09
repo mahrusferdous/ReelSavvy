@@ -12,7 +12,7 @@ const GenrePage = () => {
     const { moodSentence } = useContext(MoodSentenceContext);
 
     return (
-        <div style={{ backgroundColor: "#050505" }}>
+        <div style={{ backgroundColor: "#050505", height: "100vh" }}>
             <Sidebar />
             <div className={styles.content}>
                 <h1 className={styles.main_content} style={{ color: "#D6AA6A" }}>

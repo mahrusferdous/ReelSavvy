@@ -3,12 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     color: white;
 }
 
 .content {
-    margin: 50px 0px 50px 100px;
+    padding: 50px 0px 50px 100px;
 }
 
 .content > div {
