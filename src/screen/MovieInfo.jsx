@@ -13,6 +13,7 @@ import iconPlatform from "../assets/logos/icon-platform.svg";
 import iconLanguage from "../assets/logos/icon-language.svg";
 import iconPopular from "../assets/logos/icon-popular.svg";
 import { Carousel } from "react-bootstrap";
+import Footer from "./Footer";
 
 const MovieInfo = () => {
     const [movieInfo, setMovieInfo] = useState([]);
@@ -148,6 +149,7 @@ const MovieInfo = () => {
                     </div>
                 )}
                 <SimilarMovie id={movieInfo.id} />
+                <Footer />
             </div>
         </div>
     );

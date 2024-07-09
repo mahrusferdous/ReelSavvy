@@ -74,7 +74,9 @@ const HomePage = () => {
             <SentimentalMovies />
             <NostalgicMovies />
 
-            <Footer />
+            <div style={{ marginLeft: "377px" }}>
+                <Footer />
+            </div>
         </div>
     );
 };
