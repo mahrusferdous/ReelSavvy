@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
 
 .btn {
@@ -42,11 +41,11 @@
     text-align: center;
 }
 
-.shade {
+/* .shade {
     width: 100%;
     height: 50px;
     background: linear-gradient(to top, rgba(0, 0.3, 0.5, 0.7), transparent);
-}
+} */
 
 .topic {
     color: white;
@@ -55,7 +54,7 @@
 }
 
 .gridContainer {
-    background: black;
+    /* background: black; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;

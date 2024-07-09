@@ -31,7 +31,7 @@ const MovieInfo = () => {
     }, [id, fetchMovieInfo]);
 
     return (
-        <div className="d-flex">
+        <div className="d-flex" style={{ backgroundColor: "#050505" }}>
             <Sidebar />
             <div className={styles.main_content}>
                 <Carousel controls={false} indicators={false}>
@@ -62,7 +62,7 @@ const MovieInfo = () => {
                     </Carousel.Item>
                 </Carousel>
 
-                <div className="d-flex justify-content-evenly" style={{ background: "black", paddingTop: "20px" }}>
+                <div className="d-flex justify-content-evenly" style={{ paddingTop: "20px" }}>
                     <div className={styles.topic}>
                         <h4 style={{ color: "orange" }}>RUNTIME</h4>
                         <p>{movieInfo.runtime} minutes</p>
@@ -141,26 +141,6 @@ const MovieInfo = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* <h3>
-                    Production Companies:{" "}
-                    {movieInfo.production_companies &&
-                        movieInfo.production_companies.map((company) => company.name).join(", ")}
-                </h3>
-                <h3>
-                    Production Countries:{" "}
-                    {movieInfo.production_countries &&
-                        movieInfo.production_countries.map((country) => country.name).join(", ")}
-                </h3>
-                <h3>Status: {movieInfo.status}</h3>
-                <h3>Budget: ${movieInfo.budget}</h3>
-                <h3>Revenue: ${movieInfo.revenue}</h3>
-                <h3>
-                    Homepage:{" "}
-                    <a href={movieInfo.homepage ? movieInfo.homepage : "https://www.themoviedb.org/"}>
-                        {movieInfo.homepage}
-                    </a>
-                </h3> */}
 
                 {trailer && (
                     <div onClick={() => setTrailer(!trailer)}>
