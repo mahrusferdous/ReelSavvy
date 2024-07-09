@@ -7,7 +7,7 @@ import SimilarMovie from "../components/SimilarMovie";
 import Sidebar from "./Sidebar";
 import styles from "../styles/MovieInfo.module.css";
 import logoPlay from "../assets/logos/icon-play.svg";
-import iconHeart from "../assets/logos/icon-heart.svg";
+import iconHeart from "../assets/logos/icon-heart-black.svg";
 import iconGenre from "../assets/logos/icon-genre.svg";
 import iconPlatform from "../assets/logos/icon-platform.svg";
 import iconLanguage from "../assets/logos/icon-language.svg";
@@ -46,9 +46,6 @@ const MovieInfo = () => {
                             <p style={{ fontSize: "18px", fontWeight: "normal" }}>{movieInfo.tagline}</p>
 
                             <div>
-                                <button className={styles.heart}>
-                                    <img src={iconHeart} alt="heart" />
-                                </button>
                                 <button
                                     className={styles.btn}
                                     onClick={() => {
@@ -56,6 +53,9 @@ const MovieInfo = () => {
                                     }}
                                 >
                                     <img style={{ width: "30px" }} src={logoPlay} alt="play" /> Play Trailer
+                                </button>
+                                <button className={styles.btn}>
+                                    <img style={{ width: "30px" }} src={iconHeart} alt="heart" /> Add to Watchlist
                                 </button>
                             </div>
                         </Carousel.Caption>
