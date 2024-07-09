@@ -5,6 +5,7 @@ import styles from "../styles/MovieInfo.module.css";
 const MovieTrailer = ({ movieId }) => {
     const [trailers, setTrailers] = useState(null); // Initialize with null
     const [trailer, setTrailer] = useState(null); // Initialize with null
+    const [text, setText] = useState("Loading..."); // Initialize with null
 
     useEffect(() => {
         // Fetch the movie trailers when movieId changes
@@ -25,6 +26,10 @@ const MovieTrailer = ({ movieId }) => {
         }
     }, [trailers]);
 
+    setTimeout(() => {
+        setText("Not Available");
+    }, 5000);
+
     return (
         <div className={styles.trailer}>
             {trailer ? (
@@ -38,7 +43,7 @@ const MovieTrailer = ({ movieId }) => {
                     ></iframe>
                 </div>
             ) : (
-                <p style={{ color: "white" }}>Not Available</p> // Loading state or message
+                <p style={{ color: "white" }}>{text}</p> // Loading state or message
             )}
         </div>
     );
