@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import { MoodContext } from "../context/MoodContext";
 import styles from "../styles/GenrePage.module.css";
 import { MoodSentenceContext } from "../context/MoodSentenceContext";
+import Footer from "./Footer";
 
 const GenrePage = () => {
     const { ids } = useContext(IdsContext);
@@ -25,6 +26,9 @@ const GenrePage = () => {
                             <GenreMovie genreId={id} />
                         </div>
                     ))}
+                </div>
+                <div style={{ marginLeft: "277px" }}>
+                    <Footer />
                 </div>
             </div>
         </div>
