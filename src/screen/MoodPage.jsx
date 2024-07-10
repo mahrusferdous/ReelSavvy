@@ -79,7 +79,7 @@ const MoodPage = () => {
                             setIds([28, 12, 53]);
                             setMood("Excited");
                             setMoodSentence(
-                                "Are you in the mood for an adrenaline-fueled action, a trilling adventure, or an intese triller?"
+                                "Are you in the mood for an adrenaline-fueled action, a trilling adventure, or an intense triller?"
                             );
                             navigate("/genre");
                         }}
@@ -227,11 +227,29 @@ const MoodPage = () => {
                         <EmojiList mood={scared} name="Scared" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([18, 10751, 10749]);
+                            setMood("Sentimental");
+                            setMoodSentence(
+                                "Would you like a romantic drama, a heartwarming family film, or a sentimental romance?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={sentimental} name="Sentimental" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([10751, 10749, 18]);
+                            setMood("Warm");
+                            setMoodSentence(
+                                "Would you like to watch a heartwarming family film, a romantic drama, or a captivating drama?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={warm} name="Warm" />
                     </button>
                 </div>
@@ -240,23 +258,66 @@ const MoodPage = () => {
 
                 <h2>Intense and serious</h2>
                 <div className={styles.moods}>
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([28, 12, 878]);
+                            setMood("Futuristic");
+                            setMoodSentence(
+                                "Are you looking for a movie set in the future with action, adventure, or science fiction elements?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={futuristic} name="Futuristic" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([80, 53, 27]);
+                            setMood("Intense");
+                            setMoodSentence(
+                                "Would you like a gripping crime movie, a suspenseful thriller, or a terrifying horror?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={intense} name="Intense" />
                     </button>
 
-                    <button>
+                    <button
+                    // onClick={() => {
+                    //     setIds([80, 53, 27]);
+                    //     setMood("Light-hearted");
+                    //     setMoodSentence(
+                    //         "Would you like a gripping crime movie, a suspenseful thriller, or a terrifying horror?"
+                    //     );
+                    //     navigate("/genre");
+                    // }}
+                    >
                         <EmojiList mood={light_hearted} name="Light-hearted" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([18, 10752, 80]);
+                            setMood("Serious");
+                            setMoodSentence("Are you interested in a drama, a war movie, or a gripping crime movie?");
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={serious} name="Serious" />
                     </button>
 
-                    <button>
+                    <button
+                        onClick={() => {
+                            setIds([80, 53, 9648]);
+                            setMood("Suspenseful");
+                            setMoodSentence(
+                                "Would you like a suspenseful crime movie, a thrilling thriller, or a mysterious mystery?"
+                            );
+                            navigate("/genre");
+                        }}
+                    >
                         <EmojiList mood={suspenseful} name="Suspenseful" />
                     </button>
                 </div>
