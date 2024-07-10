@@ -6,6 +6,7 @@ import styles from "../styles/HomePage.module.css";
 import { IdContext } from "../context/IdContext";
 import { useNavigate } from "react-router-dom";
 import iconHeart from "../assets/logos/icon-heart.svg";
+import bannerLogo from "../assets/logos/banner_logo.png";
 import PopularMovies from "../components/PopularMovies";
 import SentimentalMovies from "../components/SentimentalMovies";
 import NostalgicMovies from "../components/NostalgicMovies";
@@ -41,7 +42,7 @@ const HomePage = () => {
         <div style={{ backgroundColor: "#050505" }}>
             <Sidebar />
             <div className={styles.main_content}>
-                <Carousel className={styles.caption}>
+                <Carousel>
                     {movies.map(
                         (movie) =>
                             movie.backdrop_path && (
@@ -73,6 +74,10 @@ const HomePage = () => {
             <PopularMovies />
             <SentimentalMovies />
             <NostalgicMovies />
+
+            <div className={styles.banner}>
+                <img onClick={() => navigation("/mood")} class="img-fluid" src={bannerLogo} alt="Banner" />
+            </div>
 
             <div style={{ marginLeft: "377px" }}>
                 <Footer />

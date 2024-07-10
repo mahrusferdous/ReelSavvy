@@ -4,13 +4,13 @@
     background-color: #050505;
 }
 
-.captionP {
+/* .caption {
     color: orange;
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
     padding-top: 600px;
-}
+} */
 
 .heart {
     background-color: transparent;
@@ -23,4 +23,18 @@
 .heart img {
     width: 30px;
     height: 30px;
+}
+
+.banner {
+    margin-left: 377px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    margin: 50px 0px;
+    cursor: pointer;
+    height: 320px;
+    width: 94%;
 }
