@@ -57,6 +57,8 @@ const WatchList = () => {
                                 </div>
                             </div>
                         ))}
+                </div>
+                <div style={{ marginLeft: "377px" }}>
                     <Footer />
                 </div>
             </div>
