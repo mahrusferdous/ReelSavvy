@@ -31,6 +31,12 @@ const MovieInfo = () => {
             });
     }, [id, fetchMovieInfo]);
 
+    const handleAddToWatchList = () => {
+        const storedWatchList = JSON.parse(localStorage.getItem("watchList")) || [];
+        const updatedWatchList = [...storedWatchList, movieInfo];
+        localStorage.setItem("watchList", JSON.stringify(updatedWatchList));
+    };
+
     return (
         <div className="d-flex" style={{ backgroundColor: "#050505" }}>
             <Sidebar />
@@ -55,7 +61,7 @@ const MovieInfo = () => {
                                 >
                                     <img style={{ width: "30px" }} src={logoPlay} alt="play" /> Play Trailer
                                 </button>
-                                <button className={styles.btn}>
+                                <button className={styles.btn} onClick={handleAddToWatchList}>
                                     <img style={{ width: "30px" }} src={iconHeart} alt="heart" /> Add to Watchlist
                                 </button>
                             </div>

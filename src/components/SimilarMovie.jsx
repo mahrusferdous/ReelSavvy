@@ -20,8 +20,6 @@ const SimilarMovie = ({ id }) => {
             });
     }, [id, fetchSimilarMovies]);
 
-    console.log(similarMovies);
-
     return (
         <div className={styles.main_content}>
             {similarMovies &&

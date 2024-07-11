@@ -76,7 +76,7 @@ const HomePage = () => {
             <NostalgicMovies />
 
             <div className={styles.banner}>
-                <img onClick={() => navigation("/mood")} class="img-fluid" src={bannerLogo} alt="Banner" />
+                <img onClick={() => navigation("/mood")} className="img-fluid" src={bannerLogo} alt="Banner" />
             </div>
 
             <div style={{ marginLeft: "377px" }}>

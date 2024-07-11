@@ -6,6 +6,7 @@ import GenrePage from "./screen/GenrePage.jsx";
 import SearchMovie from "./screen/SearchMovie.jsx";
 import MovieInfo from "./screen/MovieInfo.jsx";
 import HomePage from "./screen/HomePage.jsx";
+import WatchList from "./screen/WatchList.jsx";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/genre" element={<GenrePage />} />
             <Route path="/search" element={<SearchMovie />} />
             <Route path="/movie" element={<MovieInfo />} />
+            <Route path="/watchlist" element={<WatchList />} />
             <Route
                 path="*"
                 element={

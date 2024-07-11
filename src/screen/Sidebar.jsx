@@ -39,8 +39,8 @@ const Sidebar = () => {
                 <Link to="/" className={styles.navLink}>
                     <img src={logoRecent} alt="recent   " /> Recent
                 </Link>
-                <Link to="/" className={styles.navLink}>
-                    <img src={logoCollection} alt="collection" /> My Watchlist
+                <Link to="/watchlist" className={styles.navLink}>
+                    <img src={logoCollection} alt="watchlist" /> My Watchlist
                 </Link>
             </nav>
             <nav className="nav flex-column mx-5">

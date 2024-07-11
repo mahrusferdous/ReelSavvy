@@ -20,8 +20,6 @@ const PopularMovies = () => {
             });
     }, [fetchPopularMovies]);
 
-    console.log(movies);
-
     return (
         <div className={styles.content}>
             <h1>Popular Movies</h1>
