@@ -38,6 +38,12 @@ const HomePage = () => {
         return shuffled;
     };
 
+    const handleAddToWatchList = (movie) => {
+        const storedWatchList = JSON.parse(localStorage.getItem("watchList")) || [];
+        const updatedWatchList = [...storedWatchList, movie];
+        localStorage.setItem("watchList", JSON.stringify(updatedWatchList));
+    };
+
     return (
         <div style={{ backgroundColor: "#050505" }}>
             <Sidebar />
@@ -61,7 +67,7 @@ const HomePage = () => {
                                     <Carousel.Caption>
                                         <p className={styles.captionP}>TOP RECOMMENDED MOVIES</p>
                                         <h1>{movie.title}</h1>
-                                        <button className={styles.heart}>
+                                        <button className={styles.heart} onClick={() => handleAddToWatchList(movie)}>
                                             <img src={iconHeart} alt="heart" />
                                         </button>
                                     </Carousel.Caption>
