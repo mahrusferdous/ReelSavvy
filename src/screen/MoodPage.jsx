@@ -287,14 +287,14 @@ const MoodPage = () => {
                         </button>
 
                         <button
-                        // onClick={() => {
-                        //     setIds([80, 53, 27]);
-                        //     setMood("Light-hearted");
-                        //     setMoodSentence(
-                        //         "Would you like a gripping crime movie, a suspenseful thriller, or a terrifying horror?"
-                        //     );
-                        //     navigate("/genre");
-                        // }}
+                            onClick={() => {
+                                setIds([35, 10749, 10402]);
+                                setMood("Light-hearted");
+                                setMoodSentence(
+                                    "Are you in the  mood for a comedy, a romantic romance, or an upbeat music-themed movie?"
+                                );
+                                navigate("/genre");
+                            }}
                         >
                             <EmojiList mood={light_hearted} name="Light-hearted" />
                         </button>
