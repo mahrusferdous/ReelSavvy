@@ -1,6 +1,6 @@
 # ReelSavvy
 
-ReelSavvy is a movie recommendation web application that suggests movies based on the user's mood. The user can select their mood from a list of options and the application will recommend a movie that matches their mood. The user can also search for a specific movie and view its details, including the trailer.
+ReelSavvy is a movie recommendation web application that suggests movies based on the user's mood. The user can select their mood from a list of options and the application will recommend a movie that matches their mood. The user can also search for a specific movie and view its details, including the trailer. The user can save movies to their WatchList for later viewing.
 
 ## Link to the deployed application
 
@@ -17,6 +17,9 @@ ReelSavvy is a movie recommendation web application that suggests movies based o
 ## Features
 
 -   Tailored movie recommended based on user's mood
+-   Search for a specific movie
+-   View movie details, including the trailer
+-   WacthList feature to save movies for later viewing
 
 ## Getting Started
 
