@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { fetchSentimentalMovies } from "../api/tmdbApi";
 import styles from "../styles/PopularMovies.module.css";
 import { IdContext } from "../context/IdContext";
@@ -9,6 +9,7 @@ const SentimentalMovies = () => {
     const posterURL = "https://image.tmdb.org/t/p/w500";
     const navigate = useNavigate();
     const { setId } = useContext(IdContext);
+    const scrollRef = useRef(null);
 
     useEffect(() => {
         fetchSentimentalMovies()
@@ -19,6 +20,16 @@ const SentimentalMovies = () => {
                 console.error("Error fetching popular movies:", error);
             });
     }, [fetchSentimentalMovies]);
+
+    // Function to scroll the div to the right
+    const scrollRight = () => {
+        scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    };
+
+    // Function to scroll the div to the left
+    const scrollLeft = () => {
+        scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    };
 
     return (
         <div className={styles.content}>

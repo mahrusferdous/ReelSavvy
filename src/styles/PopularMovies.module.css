@@ -35,3 +35,52 @@
     width: 150px;
     border-radius: 5px;
 }
+
+/* Add these styles to your PopularMovies.module.css */
+
+.scrollButton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scrollButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.scrollButton:focus {
+    outline: none;
+}
+
+.scrollContainer {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-direction: row;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    width: calc(100% - 80px); /* Adjust the width considering the buttons */
+    margin: 0 40px; /* Adjust the margin considering the buttons */
+}
+
+.scrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.leftButton {
+    left: 0;
+}
+
+.rightButton {
+    right: 0;
+}
+
+.main_content {
+    position: relative;
+}
