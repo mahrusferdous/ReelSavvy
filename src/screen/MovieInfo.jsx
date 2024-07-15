@@ -154,6 +154,7 @@ const MovieInfo = () => {
                         <MovieTrailer movieId={movieInfo.id} />
                     </div>
                 )}
+
                 <SimilarMovie id={movieInfo.id} />
                 <Footer />
             </div>

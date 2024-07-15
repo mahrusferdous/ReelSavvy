@@ -3,6 +3,8 @@
     overflow-y: hidden;
     overflow-x: scroll;
     flex-direction: column;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .content {
@@ -13,11 +15,6 @@
 
 .main_content::-webkit-scrollbar {
     display: none;
-}
-
-.main_content {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
 }
 
 .main_content div {
