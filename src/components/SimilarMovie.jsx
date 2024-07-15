@@ -11,13 +11,15 @@ const SimilarMovie = ({ id }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetchSimilarMovies(id)
-            .then((data) => {
-                setSimilarMovies(data);
-            })
-            .catch((error) => {
-                console.error("Error fetching similar movies:", error);
-            });
+        if (id) {
+            fetchSimilarMovies(id)
+                .then((data) => {
+                    setSimilarMovies(data);
+                })
+                .catch((error) => {
+                    console.error("Error fetching similar movies:", error);
+                });
+        }
     }, [id, fetchSimilarMovies]);
 
     return (
