@@ -23,12 +23,12 @@ const SentimentalMovies = () => {
 
     // Function to scroll the div to the right
     const scrollRight = () => {
-        scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        scrollRef.current.scrollBy({ left: 500, behavior: "smooth" });
     };
 
     // Function to scroll the div to the left
     const scrollLeft = () => {
-        scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        scrollRef.current.scrollBy({ left: -500, behavior: "smooth" });
     };
 
     return (
