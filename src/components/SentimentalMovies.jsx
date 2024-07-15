@@ -35,7 +35,10 @@ const SentimentalMovies = () => {
         <div className={styles.content}>
             <h1>Sentimental Movies</h1>
             <div className={styles.main_content}>
-                <div>
+                <button className={`${styles.scrollButton} ${styles.leftButton}`} onClick={scrollLeft}>
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div ref={scrollRef} className={styles.scrollContainer}>
                     {movies.map((movie) => (
                         <div
                             key={movie.id}
@@ -49,6 +52,9 @@ const SentimentalMovies = () => {
                         </div>
                     ))}
                 </div>
+                <button className={`${styles.scrollButton} ${styles.rightButton}`} onClick={scrollRight}>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     );

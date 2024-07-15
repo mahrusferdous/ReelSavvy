@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { fetchNostalgicMovies } from "../api/tmdbApi";
 import styles from "../styles/PopularMovies.module.css";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ const NostalgicMovies = () => {
     const posterURL = "https://image.tmdb.org/t/p/w500";
     const navigate = useNavigate();
     const { setId } = useContext(IdContext);
+    const scrollRef = useRef(null);
 
     useEffect(() => {
         fetchNostalgicMovies()
@@ -20,11 +21,24 @@ const NostalgicMovies = () => {
             });
     }, [fetchNostalgicMovies]);
 
+    // Function to scroll the div to the right
+    const scrollRight = () => {
+        scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    };
+
+    // Function to scroll the div to the left
+    const scrollLeft = () => {
+        scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    };
+
     return (
         <div className={styles.content}>
             <h1>Nostalgic Movies</h1>
             <div className={styles.main_content}>
-                <div>
+                <button className={`${styles.scrollButton} ${styles.leftButton}`} onClick={scrollLeft}>
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div ref={scrollRef} className={styles.scrollContainer}>
                     {movies.map((movie) => (
                         <div
                             key={movie.id}
@@ -38,6 +52,9 @@ const NostalgicMovies = () => {
                         </div>
                     ))}
                 </div>
+                <button className={`${styles.scrollButton} ${styles.rightButton}`} onClick={scrollRight}>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     );
