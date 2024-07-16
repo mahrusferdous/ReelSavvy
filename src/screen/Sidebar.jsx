@@ -24,33 +24,33 @@ const Sidebar = () => {
                 <Link to="/" className={styles.navLink}>
                     <img src={logoHome} alt="home" /> Home
                 </Link>
-                <Link className={styles.navLink}>
+                {/* <Link className={styles.navLink}>
                     <img src={logoDiscovery} alt="discovery" /> Discovery
-                </Link>
+                </Link> */}
                 <Link to="/mood" className={styles.navLink}>
                     <img src={logoLoader} alt="loader" /> Mood Feature
                 </Link>
-                <Link className={styles.navLink}>
+                {/* <Link className={styles.navLink}>
                     <img src={logoCommunity} alt="community" /> Community
-                </Link>
+                </Link> */}
             </nav>
             <p className={styles.pTag}>LIBRARY</p>
             <nav className="nav flex-column mx-5 mb-5">
-                <Link className={styles.navLink}>
+                {/* <Link className={styles.navLink}>
                     <img src={logoRecent} alt="recent   " /> Recent
-                </Link>
+                </Link> */}
                 <Link to="/watchlist" className={styles.navLink}>
                     <img src={logoCollection} alt="watchlist" /> My Watchlist
                 </Link>
             </nav>
-            <nav className="nav flex-column mx-5">
+            {/* <nav className="nav flex-column mx-5">
                 <Link className={styles.navLink}>
                     <img src={logoSettings} alt="settings" /> Settings
                 </Link>
                 <Link className={styles.navLink}>
                     <img src={logoHelp} alt="logout" /> Logout
                 </Link>
-            </nav>
+            </nav> */}
         </div>
     );
 };
