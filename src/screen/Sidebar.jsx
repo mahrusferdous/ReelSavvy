@@ -24,19 +24,19 @@ const Sidebar = () => {
                 <Link to="/" className={styles.navLink}>
                     <img src={logoHome} alt="home" /> Home
                 </Link>
-                <Link to="/" className={styles.navLink}>
+                <Link className={styles.navLink}>
                     <img src={logoDiscovery} alt="discovery" /> Discovery
                 </Link>
                 <Link to="/mood" className={styles.navLink}>
                     <img src={logoLoader} alt="loader" /> Mood Feature
                 </Link>
-                <Link to="/" className={styles.navLink}>
+                <Link className={styles.navLink}>
                     <img src={logoCommunity} alt="community" /> Community
                 </Link>
             </nav>
             <p className={styles.pTag}>LIBRARY</p>
             <nav className="nav flex-column mx-5 mb-5">
-                <Link to="/" className={styles.navLink}>
+                <Link className={styles.navLink}>
                     <img src={logoRecent} alt="recent   " /> Recent
                 </Link>
                 <Link to="/watchlist" className={styles.navLink}>
@@ -44,10 +44,10 @@ const Sidebar = () => {
                 </Link>
             </nav>
             <nav className="nav flex-column mx-5">
-                <Link to="/" className={styles.navLink}>
+                <Link className={styles.navLink}>
                     <img src={logoSettings} alt="settings" /> Settings
                 </Link>
-                <Link to="/" className={styles.navLink}>
+                <Link className={styles.navLink}>
                     <img src={logoHelp} alt="logout" /> Logout
                 </Link>
             </nav>
