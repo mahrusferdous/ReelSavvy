@@ -1,7 +1,7 @@
 .main_content {
-    margin-left: 377px; /* Adjust margin to account for side element width */
-    flex-direction: column;
-    background-color: #050505;
+	margin-left: 377px; /* Adjust margin to account for side element width */
+	flex-direction: column;
+	background-color: #050505;
 }
 
 /* .caption {
@@ -13,28 +13,50 @@
 } */
 
 .heart {
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border: none;
-    /* margin-right: 20px; */
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 1.2rem;
+	border: none;
+	/* margin-right: 20px; */
 }
 
 .heart img {
-    width: 30px;
-    height: 30px;
+	width: 30px;
+	height: 30px;
 }
 
 .banner {
-    margin-left: 377px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	margin-left: 377px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .banner img {
-    margin: 50px 0px;
-    cursor: pointer;
-    height: 320px;
-    width: 94%;
+	margin: 50px 0px;
+	cursor: pointer;
+	height: 320px;
+	width: 94%;
+}
+
+.footerStyle {
+	margin-left: 377px;
+}
+
+@media screen and (max-width: 768px) {
+	.main_content {
+		margin-left: 0;
+	}
+
+	.banner {
+		margin-left: 0;
+	}
+
+	.banner img {
+		height: 100px;
+	}
+
+	.footerStyle {
+		margin-left: 0;
+	}
 }
