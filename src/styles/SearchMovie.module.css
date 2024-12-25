@@ -1,3 +1,8 @@
+.main {
+	display: flex;
+	background-color: #050505;
+}
+
 .main_content {
 	margin-left: 377px; /* Adjust margin to account for side element width */
 	display: flex;
@@ -44,5 +49,9 @@
 
 	.footer_left {
 		margin-left: 0;
+	}
+
+	.main {
+		flex-direction: column;
 	}
 }

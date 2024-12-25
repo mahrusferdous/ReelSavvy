@@ -56,7 +56,7 @@ const MoodPage = () => {
 	];
 
 	return (
-		<div className="d-flex" style={{ background: "#050505" }}>
+		<div className={styles.main}>
 			<Sidebar />
 			<div className={styles.mood_left}>
 				<div className={styles.main_content}>

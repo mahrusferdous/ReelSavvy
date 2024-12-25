@@ -1,3 +1,8 @@
+.main {
+	display: flex;
+	background: #050505;
+}
+
 .mood_left {
 	margin-left: 377px;
 	width: 100vw;
@@ -77,5 +82,9 @@
 	.main_content {
 		margin-left: 0;
 		padding: 20px;
+	}
+
+	.main {
+		flex-direction: column;
 	}
 }

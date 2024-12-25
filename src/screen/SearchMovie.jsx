@@ -9,7 +9,7 @@ const SearchMovie = () => {
 	const { movie } = useContext(MovieContext);
 
 	return (
-		<div className="d-flex" style={{ backgroundColor: "#050505" }}>
+		<div className={styles.main}>
 			<Sidebar />
 			<div>
 				<div className={styles.main_content}>
