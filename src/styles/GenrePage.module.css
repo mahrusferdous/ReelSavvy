@@ -1,15 +1,37 @@
 .main_content {
-    margin-left: 377px; /* Adjust margin to account for side element width */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+	margin-left: 377px; /* Adjust margin to account for side element width */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
 }
 
 .content {
-    padding: 50px 0px 0px 100px;
+	padding: 50px 0px 0px 100px;
 }
 
 .content > div {
-    margin: 80px 0px;
+	margin: 80px 0px;
+}
+
+.footer_left {
+	margin-left: 277px;
+}
+
+@media screen and (max-width: 768px) {
+	.main_content {
+		margin-left: 0;
+	}
+
+	.content {
+		padding: 20px;
+	}
+
+	.footer_left {
+		margin-left: 0;
+	}
+
+	.content > div {
+		margin: 30px 0px;
+	}
 }

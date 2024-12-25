@@ -1,94 +1,114 @@
 .main {
-    margin-left: 377px;
+	margin-left: 377px;
 }
 
 .main_content {
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
-    overflow-x: scroll;
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+	overflow-x: scroll;
 }
 
 .content {
-    margin-left: 400px;
-    color: white;
-    padding-top: 50px;
+	margin-left: 400px;
+	color: white;
+	padding-top: 50px;
 }
 
 .main_content::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .main_content {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .main_content div {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .poster {
-    object-fit: contain;
-    width: 355.859px;
-    margin-left: 20px;
-    transition: transform 450ms;
-    border-radius: 5px;
-    padding: 50px 0;
+	object-fit: contain;
+	/* width: 355.859px; */
+	margin-left: 20px;
+	transition: transform 450ms;
+	border-radius: 5px;
+	padding: 50px 0;
 }
 
 .poster img {
-    width: 150px;
-    border-radius: 5px;
+	width: 150px;
+	border-radius: 5px;
 }
 
 /* Add these styles to your PopularMovies.module.css */
 
 .scrollButton {
-    background-color: rgba(0, 0, 0, 0.5);
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-color: transparent;
+	border: none;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
 }
 
 .scrollButton:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .scrollButton:focus {
-    outline: none;
+	outline: none;
 }
 
 .scrollContainer {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    flex-direction: row;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    width: calc(100% - 80px);
-    margin: 0 40px;
+	display: flex;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	flex-direction: row;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	width: calc(100% - 80px);
+	margin: 0 40px;
 }
 
 .scrollContainer::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .leftButton {
-    left: 0;
+	left: 0;
 }
 
 .rightButton {
-    right: 0;
+	right: 0;
 }
 
 .main_content {
-    position: relative;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		margin-left: 0;
+	}
+
+	.content {
+		padding-top: 0;
+		margin-left: 0;
+	}
+
+	.scrollContainer {
+		margin: 0;
+		width: 100%;
+	}
+
+	.scrollButton {
+		display: none;
+	}
 }

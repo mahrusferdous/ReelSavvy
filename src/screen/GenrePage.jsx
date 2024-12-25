@@ -8,31 +8,31 @@ import { MoodSentenceContext } from "../context/MoodSentenceContext";
 import Footer from "./Footer";
 
 const GenrePage = () => {
-    const { ids } = useContext(IdsContext);
-    const { mood } = useContext(MoodContext);
-    const { moodSentence } = useContext(MoodSentenceContext);
+	const { ids } = useContext(IdsContext);
+	const { mood } = useContext(MoodContext);
+	const { moodSentence } = useContext(MoodSentenceContext);
 
-    return (
-        <div style={{ backgroundColor: "#050505" }}>
-            <Sidebar />
-            <div className={styles.content}>
-                <h1 className={styles.main_content} style={{ color: "#D6AA6A" }}>
-                    Because you selected the {mood} mood...
-                </h1>
-                <p className={styles.main_content}>{moodSentence}</p>
-                <div>
-                    {ids.map((id) => (
-                        <div key={id}>
-                            <GenreMovie genreId={id} />
-                        </div>
-                    ))}
-                </div>
-                <div style={{ marginLeft: "277px" }}>
-                    <Footer />
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div style={{ backgroundColor: "#050505" }}>
+			<Sidebar />
+			<div className={styles.content}>
+				<h1 className={styles.main_content} style={{ color: "#D6AA6A" }}>
+					Because you selected the {mood} mood...
+				</h1>
+				<p className={styles.main_content}>{moodSentence}</p>
+				<div>
+					{ids.map((id) => (
+						<div key={id}>
+							<GenreMovie genreId={id} />
+						</div>
+					))}
+				</div>
+				<div className={styles.footer_left}>
+					<Footer />
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default GenrePage;
