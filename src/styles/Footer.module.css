@@ -15,3 +15,15 @@
 .main_content p {
 	margin: 0 20px;
 }
+
+@media screen and (max-width: 768px) {
+	.main_content {
+		padding: 0 0 30px 0;
+	}
+
+	.main_content div {
+		flex-direction: column;
+		text-align: center;
+		font-size: medium;
+	}
+}
