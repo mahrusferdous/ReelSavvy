@@ -1,32 +1,47 @@
 .main_content {
-    margin-left: 377px; /* Adjust margin to account for side element width */
-    display: flex;
-    /* overflow-y: hidden;
+	margin-left: 377px; /* Adjust margin to account for side element width */
+	display: flex;
+	/* overflow-y: hidden;
     overflow-x: scroll; */
-    /* flex-direction: column; */
-    color: white;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 80px;
+	/* flex-direction: column; */
+	color: white;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 80px;
 }
 
 .content {
-    transition: transform 450ms;
-    border-radius: 5px;
-    padding: 20px 0;
-    margin: 10px;
+	transition: transform 450ms;
+	border-radius: 5px;
+	padding: 20px 0;
+	margin: 10px;
 }
 
 .content img {
-    width: 150px;
-    border-radius: 5px;
+	width: 150px;
+	border-radius: 5px;
 }
 
 .movie_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(245, 239, 235, 0.1);
-    border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(245, 239, 235, 0.1);
+	border-radius: 10px;
+}
+
+.footer_left {
+	margin-left: 377px;
+}
+
+@media screen and (max-width: 768px) {
+	.main_content {
+		margin-left: 0;
+		padding: 0;
+	}
+
+	.footer_left {
+		margin-left: 0;
+	}
 }
