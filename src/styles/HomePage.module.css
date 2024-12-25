@@ -39,7 +39,7 @@
 	width: 94%;
 }
 
-.footerStyle {
+.footer_left {
 	margin-left: 377px;
 }
 
@@ -56,7 +56,7 @@
 		height: 100px;
 	}
 
-	.footerStyle {
+	.footer_left {
 		margin-left: 0;
 	}
 }

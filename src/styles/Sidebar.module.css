@@ -11,6 +11,10 @@
 	scrollbar-width: none;
 }
 
+.sidebar_small {
+	display: none;
+}
+
 .sidebar::-webkit-scrollbar {
 	display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
 }
@@ -53,5 +57,22 @@
 @media screen and (max-width: 768px) {
 	.sidebar {
 		display: none;
+	}
+
+	.sidebar_small {
+		display: block;
+	}
+
+	.logo {
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
+	.logo img {
+		width: 150px;
+	}
+
+	.navLink {
+		font-size: small;
 	}
 }

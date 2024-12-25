@@ -85,7 +85,7 @@ const HomePage = () => {
 				<img onClick={() => navigation("/mood")} className="img-fluid" src={bannerLogo} alt="Banner" />
 			</div>
 
-			<div className={styles.footerSytle}>
+			<div className={styles.footer_left}>
 				<Footer />
 			</div>
 		</div>
